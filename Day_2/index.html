@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Programming &middot; MINET X</title>
+
+		<meta charset="utf-8">
+		<meta name="author" content="The MINET Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+		<link rel="icon" type="image/png" href="img/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="img/icon.png">
+		<meta name="theme-color" content="#2979ff">
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			
+			<div class="row">
+				
+				<div class="three columns child">
+					
+					<header>
+						
+						<a href="#" class="handletter">MINET</a> 
+						<img class="logo" src="img/x.png"></img>
+
+					</header>
+
+					<div class="rounds-list">
+						
+						<div class="list" id="round-one">
+							<span class="counter">01</span>
+							<p>Mathematics</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-two">
+							<span class="counter">02</span>
+							<p>Chess</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-three">
+							<span class="counter">03</span>
+							<p>Pokémon</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-four">
+							<span class="counter">04</span>
+							<p>Physics</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-five">
+							<span class="counter">05</span>
+							<p>Game Theory</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="nine columns child">
+
+					<div data-content="landing">
+					
+						<h1>Programming &middot; X 2016</h1>
+						<p>Welcome to Day 2 of the Programming Event of MINET X 2016. We hope you have as much fun solving the problems as we had making them. You have been provided with the Code::Blocks and Turbo C++ environments.
+
+						The event will be three hours long. There are five rounds and each round comprises three questions. Your answers will have a direct bearing on your team’s stock prices. Questions that are in the Easy, Medium and Hard sections will give you an increment in stock prices in the ratio 1:2:4 respectively. 
+
+						Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer a question perfectly on your third try, you get one-fourth of the maximum points. 
+
+						If you have any questions about the problems, do not be afraid to ask them of us. 
+						Have fun, and Make beautiful programs. Best of luck!</p>
+					</div>
+
+					<div data-content="round-one">
+
+						<h1>Round One &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Anti Primes</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Define an anti-prime as a number that has more divisors than any number below it. Given a number $n$, find the two largest anti-primes below $n$.
+<br><br>
+									<span class="bold">Input: </span>A natural number $n$<br><br>
+									<span class="bold">Output: </span>The two largest anti-primes below $n$. <br><br>
+									<span class="bold">Limit: </span>$0 \leq  n \leq  2^{31}-1$ <br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>40</td>
+											<td>36<br>24</td>
+										</tr>
+									</tbody>
+								</table>
+
+
+						</div></div>
+
+						<div id="medium">
+
+							<h3>Pitcher Problem</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									You are given two pitchers, one of which can accommodate $p$ liters of water and the other $q$ liters, with $p \leq q$. You have to tell if it is possible to obtain exactly $x$ liters of water in one of the vessels according to the instructions listed below. If it is possible, print $1$; if not, print $-1$.
+Initially, both pitchers are empty. The following operations can be done:
+<ul>
+	<li>Emptying a vessel completely.</li>
+	<li>Filling a vessel completely</li>
+	<li>Pouring water from one vessel to the other without spilling, until one of the vessels is either full or empty.</li>
+</ul>
+								</p>
+								<p id="question">
+									<span class="bold">Input: </span>Three space-separated integers, $p$, $q$ and $x$.<br><br>
+									<span class="bold">Output: </span>Print either $1$ or $-1$, as instructed in the problem statement. <br><br>
+									<span class="bold">Limits: </span>$0 \leq p \leq q \leq 2^{31}-1$ and $2 < x \leq q$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>3 7 2</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							<span class="bold"><b>Explanation:</b></span> First, the 3 litre pitcher is filled. Then all the water of the 3 litre pitcher is poured into the 7 litre pitcher, which now contains 3 litre of water. This process is repeated again and the 7 litre pitcher now contains 6 litres. Again the 3 litre pitcher is filled with water and  all the water is again poured into the 7 litre pitcher leaving 2 litres in the 3 litre pitcher.<br><br>
+							</div>
+						</div>
+
+						<div id="hard">
+
+							<h3>Tank Trouble</h3>
+							
+							<div class="question">
+								<p id="question">
+								A general decides to reward all $N$ of his cadets for doing well in their last exam. He places $N$ tanks in a base, and labels them $1$ to $N$. The cadets’ dog tags (again, labeled $1$ to $N$ for the corresponding cadet) are randomly shuffled and distributed among the tanks (one tag per tank).
+<br><br>
+Then, a game begins. The cadets will wait outside the base and—one by one—each cadet is allowed to go in and open up to $K$  tanks in search of his dog tag. 
+The tags cannot be moved. After the cadet is done, he must close all the tanks and leave the base exactly as it was upon his entry. The cadets are not allowed to communicate with one another during the game.<br><br> 
+If all $N$ cadets can find their dog tags, then they win; otherwise, they lose. Before starting the game, the cadets are given a moment to discuss a strategy for maximizing their chances of winning. No cadet has prior knowledge about the distribution of the dog tags. 
+<br><br>
+Assuming optimal play, what is the probability that $N$ cadets will win the game if they are allowed to look at up to $K$ tanks?
+<br><br>
+								<span class="bold">Input: </span>Two space-separated integers, $N$ and $K$.<br><br>
+								<span class="bold">Output: </span>The required probability, correct to $10^{-7}$ precision.<br><br>
+								<span class="bold">Limit: </span>$2 \leq  K \leq N \leq  100000$<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>8 3</td>
+											<td>0.1467262</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div data-content="round-two">
+
+						<h1>Round Two &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Numberpad Knight</h3>
+							
+							<div class="question">
+								Consider placing a chess knight at any digit on a standard phone number pad without 0 and moving it around with any number of normal L-shaped jumps, tracing out a positive integer. Your task is to tell whether the number can be formed by a knight.
+								<p id="question">
+								<br><br>
+								<span class="bold">Input: </span>The first line of input consists of integer $N$.<br><br>
+								<span class="bold">Output: </span>Print either $1$ or $-1$.<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>29434</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>Laser Headed Rooks</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+You are given a description of a chessboard . It is a square field of $n * n$ size. Each cell in a field can be empty $(0)$ or it can be occupied by a piece $(1)$.<br><br>
+You have unlimited Laser - Headed Rooks and a single turn. If you lay the rook at the cell $(x, y)$, then after triggering it, it will wipe out all pieces in the row $x$ and all pieces in the column $y$.<br><br>
+You are to determine the minimum number of such rooks required to wipe out all the pieces on a given chessboard.
+
+								<br><br>
+								<span class="bold">Input: </span>An integer $n$.<br>
+The next  $n$ lines contain $n$ symbols i.e. $0$ or $1$. The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
+
+								<br><br>
+								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co - ordinate of each rook in ordered pair form, i.e. $(x,y)$.
+<br>Or<br>
+-1 , if not possible .<br><br>
+								<span class="bold">Limit: </span>$2 \leq  n \leq  10000$<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>6<br>
+                                         0 0 0 0 0 0 1<br>
+                                         1 0 0 0 0 0 0<br>
+                                         0 0 0 0 0 0 0
+											</td>
+
+                                         
+                                               
+											<td>2</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Giant Chess</h3>
+							
+							<div class="question">
+
+								
+
+								<p id="question">
+									The game takes place on a $h * w$ grid, and it is painted in two colors, but not like in chess. Almost all cells of the field are white and only some of them are black.<br> Currently Gerald is finishing a game of giant chess against his friend Pollard. Gerald needs to bring the pawn from the upper left corner of the board, where it is now standing, to the lower right corner. He wants to know the number of ways in which he can win.<br>
+                                    The pawn can go in two ways: one cell down or one cell to the right. In addition, the pawn can not go to the black cells. According to the rules of giant chess Gerald moves his pawn until the game is over.
+                                    <br><br>
+									<span class="bold">Input: </span>The first line of the input contains three integers: $h$, $w$, $n$ — the sides of the board and the number of black cells.Next n lines contain the description of black cells. The i-th of these lines contains numbers $r_i$, $c_i$ — the number of the row and column of the i-th cell.
+                                    It is guaranteed that the upper left and lower right cell are white and all cells in the description are distinct.
+<br><br>
+									<span class="bold">Output: </span>Print a single line — the remainder of the number of ways to move Gerald's pawn from the upper left to the lower right corner modulo $10^9 + 7$.
+									<br><br>
+									<span class="bold">Limits</span><br>$1 \leq r_i \leq h, 1 \leq c_i \leq w$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table  style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>
+											3 4 2<br>
+1 2<br>
+2 1</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+						
+							</div>
+
+						</div>
+
+					</div>
+
+					<div data-content="round-three">
+
+						<h1>Round Pokémon&middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Chanaz goes to catch em’ all</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+One day Chanaz got motivated to be the best, so she planned to catch Pokémon. She has to catch a total of $n$ Pokémon. But sadly, Chanaz is exhausted, so she works as follows :<br>
+First she catches $v$ Pokémon, takes rest at the Pokémon Centre , then she catches as many as $[v / k]$ Pokémon, takes rest again, then catches $[v / (k^2)]$ Pokémon and so on, forming the sequence :<br>
+$[v], [v / k], [v / k^2], [v / k^3], [v / k^4], [v / k^5], [v / k^6] ...$
+The expression $[a / b]$ is regarded as the integral part from dividing number $a$ by number $b$, that is, the Greatest Integer Function(Roof function).<br><br>
+The moment the value of $[v / (k^p)]= 0$, Chanaz stops and goes to sleep. Once she sleeps, she gives up on catching Pokémon. But she wants to have $n$ Pokémon till then.
+<br><br>
+Chanaz is wondering, what minimum value $v$ can take to let her catch not less than n Pokémon before she falls asleep. Can you help her?
+							<br><br>
+								<span class="bold">Input: </span>The first two lines contain $x$ and $y$ respectively.
+								The third line contains $x$ numbers giving $z$ for each of the $x$ weeks.<br><br>
+								<span class="bold">Output: </span>The number of containers used.<br><br>
+								<span class="bold">Limit: </span>$1 < x \leq 10^9$ and
+								$2 \leq k \leq 10$<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>7 2<br>
+59 9</td>
+											<td>4<br>54</td>
+										</tr>
+									</tbody>
+								</table>
+								<b>Explanation: </b>
+In the first sample the answer is $v$ = 4. Chanaz catches Pokémon as following: first 4 Pokémon, then 2, then 1, and then Chanaz falls asleep. Thus, she manages to catch 4 + 2 + 1 = 7 Pokémon in the night and complete the task.
+<br>
+In the second sample the answer is $v$ = 54. Chanaz catches Pokémon in the following portions: 54, 6. The total sum is 54 + 6 = 60, that's more than $n$ = 59.
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>HP Calculation</h3>
+<div class="question">
+<p>
+Different Pokémons have different HP, duh. But how different can they be? Let us consider a new scenario in the Pokémon World. 
+<br><br>
+The HP of each Pokémon is a number, $N$. When each digit of $N$ is raised to the power of $n$, and added, the result is $N$, too.<br> 
+An example is given below: 
+<br>
+$1634 = 1^4+6^4+3^4+4^4$
+In this, $N$ = 1634, and $n$ = 4.<br> 
+Fact says that there are few numbers that follow the same rule. Such Pokémons having the same $n$, which follow the same rule, are grouped in one team. 
+Find the sum $S$ of these number to find the combined HP of the team.<br><br>
+</p>							
+									<span class="bold"><b>Input: </b></span>$n$ which is a natural number.<br><br>
+									<span class="bold"><b>Output:</b> </span>The first line of output is $S$, i.e. the combined HP of the team.
+<br>
+The next few lines of the output are the individual HPs of each Pokémon in the team.
+<br><br>
+									<span class="bold"><b>Limits:</b> </span>$1 < n \leq  8$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom:0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>1301 <br>153  370  371  407</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Productivity of Johto</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Champion of Johto region wants it to be the Best of all , thus increases the productivity of the trainers by dividing the region into provinces.
+
+								</p>
+
+								<ol>
+									<li>The map of Johto is a rectangular matrix of $N$ *$ M$ size and each cell denotes a single city. $A[i][j]$ is the population of the cell of $(j + 1)th $ column and $(i + 1)th $ row.</li>
+									<li>The Champion has decided that any connected region having exactly $K$ cities can form a province. A region is said to be connected if one can join the cities by moving through common sides of the cities.</li>
+									<li>A city can be part of multiple provinces.</li>
+								</ol>
+
+								<p id="question">Now the Champion wants to calculate the productivity number, $P$ of his trainers. This number is defined to be the product of the populations of all the provinces. The population of a province is the sum of the populations of all the cities in the province.
+Your task is to  find the productivity number of the kingdom. Since it can be quite large, output it $mod(10^9+7)$.</p><br><br>
+									<span class="bold"><b>Input:</b> </span>The first line of the input contains three space-separated integers: $N$,$ M$, and $ K$, denoting the number of rows in the map, the number of columns in the map and the number of cities in one province.
+Each of the following $N$ lines contain $M$ space-separated integers, denoting the populations of the cities.
+								</p>
+								<span class="bold"><b>Output:</b> </span>$P$, the productivity number of the region.<br><br>
+								<span class="bold"><b>Limits: </b></span>
+<ul>
+<li>$1 \leq N \leq 100$</li>
+<li>$1 \leq M \leq 10$</li>
+<li>$1 \leq K \leq min(10, N * M)$</li>
+<li>$1 \leq A_{i,j} \leq 1000$</li>
+</ul>
+								<br><br><br>
+								<span class="bold"><b>Example</b></span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td style="text-align: left">2 2 2
+<br>1 2<br>
+3 4
+											</td>
+											<td>504</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p id="question">
+									Here are all the provinces:<br>
+Province $1$, population $4$:<br>
+$1 2$<br>
+$3 4$<br>
+Province $2$, population $3$:<br>
+$1 2$<br>
+$3 4$<br>
+Province $3$, population $6$:<br>
+$1 2$<br>
+$3 4$<br>
+Province $4$, population $7$:<br>
+$1 2$<br>
+$3 4$<br>
+Since the productivity number is a product of all the populations, we get $4 * 3 * 6 * 7 = 504$.<br><br>
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div data-content="round-four">
+
+						<h1>Round Four &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Let’s Rotate</h3>
+							
+							<div class="question">
+								<img src="img/r4e.png" style="margin-bottom: 2.5rem;float:left;">
+								<p id="question">
+									A tether ball of mass m is suspended by a rope of length $ L$ from the top of a pole. A youngster gives it a whack  so that it moves in a circle of radius $r$ , with an angle with the pole and speed $v$.
+Write a program to find $L$. Take $g = 10m/s^2$ <br><br>
+
+									<span class="bold">Input: </span>Mass $m$ of the ball, speed $v$ of the ball in $m/s$  and angle \theta separated with spaces.<br><br>
+
+									<span class="bold">Output: </span>Length $L$ of the string in $m$.<br><br><br>
+
+									<span class="bold">Example</span><br><br>
+
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>2  20  45</td>
+											<td>56.568</td>
+										</tr>
+									</tbody>
+								</table>
+</div></div>
+
+						<div id="medium">
+
+							<h3>Path of Electron</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+								<img src="img/r4m.png" style="margin:2.5rem;float:left;">
+									An electron moves out from an atom. It moves $k[0]$ units along the positive $x$-axis and then describes that many units of arc in counter-clockwise direction. This is counted as one move. Then it moves $k[1]$ units along radius and describes an arc of $k[1]$ units. It repeats this motion till $k[3]$ units. Then it again moves $k[0]$ and repeats the process till it crosses positive $x$-axis. Write a program to find how many moves it requires to cross the positive $x$-axis.
+									<br><br>
+
+									<span class="bold">Input: </span>The first line contains a total of four space -separated integers depicting $k[0]$ ,$k[1]$,$k[2]$,$k[3]$ which are length of each path it moves.<br><br>
+									<span class="bold">Output: </span>$M$ number of moves.<br><br>
+									<span class="bold">Limits: </span>$0 < k  \leq 10000$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>2 3 4 5</td>
+											<td>220</td>
+										</tr>
+										<tr>
+											<td>2 3 5 7</td>
+											<td>199</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Crazy Balls</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Consider $n$ balls, $B_1 , . . . , B_n$, having masses $m1, m2, . . . , mn $ placed in a vertical stack with %B_1% at the bottom and %B_n% at the top. The bottom of $B_1$ is at a height $h$ above the ground, and the bottom of %B_n% is a height $h + L$  above the ground.
+The task is to find, firstly, the minimum number of balls such that the topmost ball attains a height of $H$ metres when it bounces back, after the stack is dropped from a height of $h$ metres. Assume that the balls still bounce elastically (which is a bit absurd here). Ignore wind resistance, etc., and assume that $l$ is negligible.<br><br>
+								</p>
+									<span class="bold">Input: </span>Height $h$ from which the balls would be dropped and height $H$ to which the topmost ball will go.<br><br>
+									<span class="bold">Output: </span>$N$ number of balls.<br><br>
+									<span class="bold">Limits</span> $0< h \leq 15$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>1 1000</td>
+											<td>6</td>
+										</tr>
+										<tr>
+											<td>1 200</td>
+											<td>4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div data-content="round-five">
+
+						<h1>Round Five &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Stable College Applications</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+
+There are $N$ applicants and $N$ colleges. Each college ranks all applicants in order of their preference ${A_1, A_2, A_3…A_N}$. Similarly, each applicant ranks all colleges according their preference ${C_1, C_2, C3…C_N}$. If the resulting set of pairs contains no pairs of form ${A_1,C_2} $, ${A_2, C_1}$ such that $A_1$prefers $C_1$to $C_2$and $C_1$prefers $A_1$to $A_2$ then the pairings are said to stable.<br><br>
+You need to figure out the stable solution and when there is no solution available output $-1$.
+<br><br>
+									<span class="bold">Input: </span>
+Feel free to take the inputs any way you prefer but the method below is recommended.<br>
+The first line of input will give you the value of $N$. The next $N$ lines are the preferences of the applicants, each preference will be separated with spaces. followed by $N$ lines of preferences of the college.
+<br><br>
+									<span class="bold">Output: </span>Print out $N$ stable  pairs.<br><br>
+									<span class="bold">Limits: </span>$0 < $n$ < 25$<br><br>
+								</p>
+								<p id="question">
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>
+3<br>
+1 2 3<br>
+3 1 2<br>
+3 2 1<br>
+2 1 3<br>
+3 1 2<br>
+3 2 1
+											</td>
+											<td>
+2 1<br>
+1 2<br>
+3 3
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>Powered Nim</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+Consider a game of Powered Nim where the computer is Player 1 and the checker is Player 2 . (Player 1 goes first.) <br><br>
+The rules of the game are as follows:<br>
+You will be given an integer $N$. A number has to be chosen in turns by  Player 1  and Player 2 from the set ${1,...,N}$. But, when someone has chosen a number they can also remove some or all powers of that number if they wish to. After a series of eliminations the one who can’t choose a number loses.<br><br>
+Player 1 needs to play the game in a way where it always wins and when it’s impossible for it to win the output is -1.<br><br>
+									<span class="bold">Input: </span>The first line of input will give you the value of $N$. The rest of the inputs of ‘Player 2’ are open.<br><br>
+									<span class="bold">Output: </span>Print the steps taken by player 1 and  the winner of the game.<br><br>
+									<span class="bold">Limits: </span>$0< N < 50$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+										<td>4</td>
+											<td>Player 1: 2 4<br>
+Player 2: 3<br>
+Player 1: 1<br>
+Player 1 wins.</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Grid Game</h3>
+							
+							<div class="question">
+								<p id="question">
+Alice and Bob are playing a game. A single pawn is placed on a grid of  $X*Y$ size. Some cells on the grid have been marked as impassable. You can move the  pawn a positive number of steps along the row or column towards the origin. The pawn is not allowed to land on an impassable cell. Alice and Bob alternate moves, with Alice going first. The first player unable to make a move loses.<br>
+ Assuming that  Bob is the checker your task is to make Alice play in a way that she always wins. When it is impossible for her to win, print $-1$.
+<br><br>
+
+									<span class="bold">Input: </span>
+The inputs of Bob (the checker) are open. Feel free to take the inputs any way you prefer but the method below is recommended.<br><br>
+The input will begin with an integer $N$, the number of impassable cells.$N$ lines consist of  2 integers each: the $X$ and $Y$ coordinates of an impassable cell. Following that are 2 integers: the $X$ and $Y$ coordinates of the starting position of the pawn.
+
+									<br><br>
+									<span class="bold">Output: </span>Print out the steps taken by Alice and the winner of the game.<br><br>
+									<span class="bold">Limits: </span>$0 < $N$ < 10^5$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>2<br>
+1 1<br>
+3 2<br>
+2 2</td>
+											<td>
+Alice: (1,2)<br>
+Bob: (0,2)<br>
+Alice: (0,0)<br>
+Alice wins.
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="question">
+			
+			<p id="question"><strong>1</strong> Trademarked Transaction</p>
+      		<form class="cryptx">
+				<input type="text" placeholder="Answer" name="answer" class="answer-box" autofocus autocomplete="off">
+				<input type="submit">
+			</form>
+
+		</div> -->
+
+		<script src="//use.typekit.net/dbe5tbi.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+
+		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		<script type="text/javascript">
+
+		$(".list").click(function() {
+			$(this).find("ul").slideDown();
+			$(this).find("i").css("display", "inline");
+		});
+
+		$(".list i").click(function(event) {
+			event.stopPropagation();
+			$(this).parent().find("ul").slideUp();
+			$(this).css("display", "none");
+		});
+
+		$(".list ul li").click(function() {
+			var difficulty = $(this).find("a").data("navigate");
+			var roundCount = $(this).parent().parent().attr('id');
+			$("div[data-content]").css("display", "none");
+			$('div[data-content=' + roundCount + ']').css("display", "block");
+			var id = '#' + difficulty;
+			$('div[data-content=' + roundCount + ']').find('div[id]').css("display", "none");
+			$('div[data-content=' + roundCount + ']').find(id).css("display", "block");
+			if (roundCount == "round-one") {
+				temp = "Round One &middot;";
+			} else if (roundCount == "round-two") {
+				temp = "Round Two &middot;";
+			} else if (roundCount == "round-three") {
+				temp = "Round Three &middot;";
+			} else if (roundCount == "round-four") {
+				temp = "Round Four &middot;";
+			} else if (roundCount == "round-five") {
+				temp = "Round Five &middot;";
+			}
+			var capitalized = difficulty[0].toUpperCase() + difficulty.substring(1);
+			var newText = temp + ' ' + capitalized;
+			$('div[data-content=' + roundCount + ']').find("h1").html(newText);
+		});
+
+		</script>
+
+	</body>
+
+</html>
