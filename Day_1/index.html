@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<title>Programming &middot; MINET X</title>
+
+		<meta charset="utf-8">
+		<meta name="author" content="The MINET Team">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+		<link rel="icon" type="image/png" href="img/icon.png">
+		<link rel="apple-touch-icon-precomposed" href="img/icon.png">
+		<meta name="theme-color" content="#2979ff">
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			
+			<div class="row">
+				
+				<div class="three columns child">
+					
+					<header>
+						
+						<a href="#" class="handletter">MINET</a> 
+						<img class="logo" src="img/x.png"></img>
+
+					</header>
+
+					<div class="rounds-list">
+						
+						<div class="list" id="round-one">
+							<span class="counter">01</span>
+							<p>Mathematics</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-two">
+							<span class="counter">02</span>
+							<p>Chess</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-three">
+							<span class="counter">03</span>
+							<p>Pokémon</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-four">
+							<span class="counter">04</span>
+							<p>Physics</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+						<div class="list" id="round-five">
+							<span class="counter">05</span>
+							<p>Game Theory</p>
+							<i class="ion-ios-close-empty"></i>
+							<ul>
+								<li><a data-navigate="easy">Easy</a></li>
+								<li><a data-navigate="medium">Medium</a></li>
+								<li><a data-navigate="hard">Hard</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="nine columns child">
+
+					<div data-content="landing">
+					
+						<h1>Programming &middot; X 2016</h1>
+						<p>Welcome to Day 2 of the Programming Event of MINET X 2016. We hope you have as much fun solving the problems as we had making them. You have been provided with the Code::Blocks and Turbo C++ environments.
+
+						The event will be three hours long. There are five rounds and each round comprises three questions. Your answers will have a direct bearing on your team’s stock prices. Questions that are in the Easy, Medium and Hard sections will give you an increment in stock prices in the ratio 1:2:4 respectively. 
+
+						Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer a question perfectly on your third try, you get one-fourth of the maximum points. 
+
+						If you have any questions about the problems, do not be afraid to ask them of us. 
+						Have fun, and Make beautiful programs. Best of luck!</p>
+					</div>
+
+					<div data-content="round-one">
+
+						<h1>Round One &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Anti Primes</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Define an anti-prime as a number that has more divisors than any number below it. Given a number $n$, find the two largest anti-primes below $n$.
+<br><br>
+									<span class="bold">Input: </span>A natural number $n$<br><br>
+									<span class="bold">Output: </span>The two largest anti-primes below $n$. <br><br>
+									<span class="bold">Limit: </span>$0 \leq  n \leq  2^{31}-1$ <br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>40</td>
+											<td>36<br>24</td>
+										</tr>
+									</tbody>
+								</table>
+
+
+						</div></div>
+
+						<div id="medium">
+
+							<h3>Pitcher Problem</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Consider a game of Powered Nim where the computer is Player 1 and the checker is Player 2 . (Player 1 goes first.) <br>
+The rules of the game are as follows:<br>
+You will be given an integer $N$. A number has to be chosen in turns by  Player 1  and Player 2 from the set $ {\{1,...,N}\} $. But, when someone has chosen a number they can also remove some or all powers of that number if they wish to. After a series of eliminations the one who can’t choose a number loses.<br>
+Player 1 needs to play the game in a way where it always wins and when it’s impossible for it to win the output is $-1$. <br><br>
+								</p>
+								<p id="question">
+									<span class="bold">Input: </span>The first line of input will give you the value of $N$. The rest of the inputs of Player 2 are open.<br><br>
+									<span class="bold">Output: </span>Print the steps taken by player 1 and  the winner of the game. <br><br>
+									<span class="bold">Limits: </span>$0 \leq  N \leq  50$<br><br>
+									<span class="bold">Example</span><br><br>
+
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>Player 1: 2 4<br>
+Player 2: 3<br>
+Player 1: 1<br>
+Player 1 wins.</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Tank Trouble</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+								A general decides to reward all $N$ of his cadets for doing well in their last exam. He places $N$ tanks in a base, and labels them $1$ to $N$. The cadets’ dog tags (again, labeled $1$ to $N$ for the corresponding cadet) are randomly shuffled and distributed among the tanks (one tag per tank).
+<br><br>
+Then, a game begins. The cadets will wait outside the base and—one by one—each cadet is allowed to go in and open up to $K$  tanks in search of his dog tag. 
+The tags cannot be moved. After the cadet is done, he must close all the tanks and leave the base exactly as it was upon his entry. The cadets are not allowed to communicate with one another during the game.<br><br> 
+If all $N$ cadets can find their dog tags, then they win; otherwise, they lose. Before starting the game, the cadets are given a moment to discuss a strategy for maximizing their chances of winning. No cadet has prior knowledge about the distribution of the dog tags. 
+<br><br>
+Assuming optimal play, what is the probability that $N$ cadets will win the game if they are allowed to look at up to $K$ tanks?
+<br><br>
+								<span class="bold">Input: </span>Two space-separated integers, $N$ and $K$.<br><br>
+								<span class="bold">Output: </span>The required probability, correct to $10^{-7}$ precision.<br><br>
+								<span class="bold">Limit: </span>$2 \leq  K \leq N \leq  100000$<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>8 3</td>
+											<td>0.1467262</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div data-content="round-two">
+
+						<h1>Round Two &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Numberpad Knight</h3>
+							
+							<div class="question">
+								Consider placing a chess knight at any digit on a standard phone number pad without 0 and moving it around with any number of normal L-shaped jumps, tracing out a positive integer. Your task is to tell whether the number can be formed by a knight.
+								<p id="question">
+								<br><br>
+								<span class="bold">Input: </span>The first line of input consists of integer $N$.<br><br>
+								<span class="bold">Output: </span>Print either $1$ or $-1$.<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>29434</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>Laser Headed Rooks</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+You are given a description of a chessboard . It is a square field of $n * n$ size. Each cell in a field can be empty $(0)$ or it can be occupied by a piece $(1)$.<br><br>
+You have unlimited Laser - Headed Rooks and a single turn. If you lay the rook at the cell $(x, y)$, then after triggering it, it will wipe out all pieces in the row $x$ and all pieces in the column $y$.<br><br>
+You are to determine the minimum number of such rooks required to wipe out all the pieces on a given chessboard.
+
+								<br><br>
+								<span class="bold">Input: </span>An integer $n$.<br>
+The next  $n$ lines contain $n$ symbols i.e. $0$ or $1$. The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
+
+								<br><br>
+								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co - ordinate of each rook in ordered pair form, i.e. $(x,y)$.
+<br>Or<br>
+-1 , if not possible .<br><br>
+								<span class="bold">Limit: </span>$2 \leq  n \leq  10000$<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>6<br>
+                                         0 0 0 0 0 0 1<br>
+                                         1 0 0 0 0 0 0<br>
+                                         0 0 0 0 0 0 0
+											</td>
+
+                                         
+                                               
+											<td>2</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Giant Chess</h3>
+							
+							<div class="question">
+
+								
+
+								<p id="question">
+									The game takes place on a $h$ × $w$ grid, and it is painted in two colors, but not like in chess. Almost all cells of the field are white and only some of them are black.<br> Currently Gerald is finishing a game of giant chess against his friend Pollard. Gerald needs to bring the pawn from the upper left corner of the board, where it is now standing, to the lower right corner. He wants to know the number of ways in which he can win.<br>
+                                    The pawn can go in two ways: one cell down or one cell to the right. In addition, the pawn can not go to the black cells. According to the rules of giant chess Gerald moves his pawn until the game is over.
+                                    <br><br>
+									<span class="bold">Input: </span>The first line of the input contains three integers: $h$, $w$, $n$ — the sides of the board and the number of black cells.Next n lines contain the description of black cells. The i-th of these lines contains numbers $r_i$, $c_i$ ($1 \leq r_i \leq h, 1 \leq c_i \leq w$) — the number of the row and column of the i-th cell.
+                                    It is guaranteed that the upper left and lower right cell are white and all cells in the description are distinct.
+<br><br>
+									<span class="bold">Output: </span>Print a single line — the remainder of the number of ways to move Gerald's pawn from the upper left to the lower right corner modulo $10^9 + 7$.
+									<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table  style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>
+											3 4 2<br>
+1 2<br>
+2 1</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+						
+							</div>
+
+						</div>
+
+					</div>
+
+					<div data-content="round-three">
+
+						<h1>Round Pokémon&middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Chanaz goes to catch em’ all</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+One day Chanaz got motivated to be the best, so she planned to catch Pokémon. She has to catch a total of $n$ Pokémon. But sadly, Chanaz is exhausted, so she works as follows :<br>
+First she catches $v$ Pokémon, takes rest at the Pokémon Centre , then she catches as many as $[v / k]$ Pokémon, takes rest again, then catches $[v / (k^2)]$ Pokémon and so on, forming the sequence :<br>
+$[v], [v / k], [v / k^2], [v / k^3], [v / k^4], [v / k^5], [v / k^6] ...$
+The expression $[a / b]$ is regarded as the integral part from dividing number $a$ by number $b$, that is, the Greatest Integer Function(Roof function).<br><br>
+The moment the value of $[v / (k^p)]= 0$, Chanaz stops and goes to sleep. Once she sleeps, she gives up on catching Pokémon. But she wants to have n Pokémon till then.
+<br><br>
+Chanaz is wondering, what minimum value $v$ can take to let her catch not less than n Pokémon before she falls asleep. Can you help her?
+
+							<br><br>
+								<span class="bold">Input: </span>The first two lines contain $x$ and $y$ respectively.
+								The third line contains $x$ numbers giving $z$ for each of the $x$ weeks.<br><br>
+								<span class="bold">Output: </span>The number of containers used.<br><br>
+								<span class="bold">Limit: </span>$1 < x \leq 10^9$ and
+								$2 \leq k \leq 10$<br><br>
+								<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>7 2<br>
+59 9</td>
+											<td>4<br>54</td>
+										</tr>
+									</tbody>
+								</table>
+								<b>Explanation: </b>
+In the first sample the answer is $v$ = 4. Chanaz catches Pokémon as following: first 4 Pokémon, then 2, then 1, and then Chanaz falls asleep. Thus, she manages to catch 4 + 2 + 1 = 7 Pokémon in the night and complete the task.
+<br>
+In the second sample the answer is $v$ = 54. Chanaz catches Pokémon in the following portions: 54, 6. The total sum is 54 + 6 = 60, that's more than $n$ = 59.
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>HP Calculation</h3>
+<div class="question">
+<p>
+Different Pokémons have different HP, duh. But how different can they be? Let us consider a new scenario in the Pokémon World. 
+<br><br>
+The HP of each Pokémon is a number, $N$. When each digit of $N$ is raised to the power of $n$, and added, the result is $N$, too.<br> 
+An example is given below: 
+<br>
+$1634 = 1^4+6^4+3^4+4^4$
+In this, $N$ = 1634, and $n$ = 4.<br> 
+Fact says that there are few numbers that follow the same rule. Such Pokémons having the same $n$, which follow the same rule, are grouped in one team. 
+Find the sum $S$ of these number to find the combined HP of the team.<br><br>
+</p>							
+									<span class="bold"><b>Input: </b></span>$n$ which is a natural number.<br><br>
+									<span class="bold"><b>Output:</b> </span>The first line of output is $S$, i.e. the combined HP of the team.
+<br>
+The next few lines of the output are the individual HPs of each Pokémon in the team.
+<br><br>
+									<span class="bold"><b>Limits:</b> </span>$1 < n \leq  8$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom:0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>1301 <br>153  370  371  407</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Productivity of Johto</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Champion of Johto region wants it to be the Best of all , thus increases the productivity of the trainers by dividing the region into provinces.
+
+								</p>
+
+								<ol>
+									<li>The map of Johto is a rectangular matrix of $N$ *$ M$ size and each cell denotes a single city. $A[i][j]$ is the population of the cell of $(j + 1)th $ column and $(i + 1)th $ row.</li>
+									<li>The Champion has decided that any connected region having exactly $K$ cities can form a province. A region is said to be connected if one can join the cities by moving through common sides of the cities.</li>
+									<li>A city can be part of multiple provinces.</li>
+								</ol>
+
+								<p id="question">Now the Champion wants to calculate the productivity number (P) of his trainers. This number is defined to be the product of the populations of all the provinces. The population of a province is the sum of the populations of all the cities in the province.
+Your task is to  find the productivity number of the kingdom. Since it can be quite large, output it modulo 10^9+7.</p>
+									<span class="bold"><b>Input:</b> </span>The first line of the input contains three space-separated integers: $N$,$ M$,$ K$, denoting the number of rows in the map, the number of columns in the map and the number of cities in one province.
+Each of the following $N$ lines contain $M$ space-separated integers, denoting the populations of the cities.
+								</p>
+								<span class="bold"><b>Output:</b> </span>$P$, the productivity number of the region.<br><br>
+								<span class="bold"><b>Limits: </b></span>$1 \leq N \leq  100$<br><br><br>
+								<span class="bold"><b>Example</b></span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td style="text-align: left">1 395<br>
+												18 246 615815 60<br>
+												73 228 14618 195<br><br>
+												6 5<br>
+												10 1 3 17<br>
+												5 2 7 19
+											</td>
+											<td>Case #1: 1<br>Case #2: 3</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p id="question">
+									In Test Case 1, the company has only a CEO and no other employees, but it does not violate any of the laws, so no changes need to be made.
+									Here is the org chart for Test Case 2:<br><br>
+								</p>
+
+								<img src="img/r3hard.png"></img>
+
+								<p id="question">
+									The optimal strategy is to save employees 0, 1, and 5 (who have salaries of 10, 13, and 8, respectively). It is not possible to save employee 2, for example, because her salary is more than 5 away from employee 0's salary of 10; since employee 0 cannot be laid off, employee 2 must be laid off (along with all employees who report to her).<br>
+									If you want to check your sequences for employees 1 through 5, they are:<br><br>
+									<span class="bold">S: </span>13, 16, 2, 5, 8<br>
+									<span class="bold">M: </span>17, 3, 13, 14, 16<br><br>
+									Manager Numbers: 17 % 1 = 0, 3 % 2 = 1, 13 % 3 = 1, 14 % 4 = 2, 16 % 5 = 1
+								</p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div data-content="round-four">
+
+						<h1>Round Four &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Enigma</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									Some teachers were inspired by the movie 'The Imitation Game' which was loosely based on the professional and personal history of Alan Turing. A significant portion of the movie revolves around cracking the code generated by Enigma machine which was employed by the German Army. As a joke, these teachers created an Enigma machine of their own to send secret messages to their fellow teachers. As students were the physical messengers of these messages, who lugged around carrying sheets of papers, encryption was the way to go.<br><br>
+
+									For those who are not familiar with the concept of the Enigma machine, please check the Appendix at the end of this question before proceeding with the question.<br><br>
+
+									One of the students decided to crack the code. He snuck into one of the teachers’ room, and found the Enigma machine lying unguarded on the table. It only had 2 rotors with 26 numbers on each rotor (0 to 25). Seizing the opportunity he noted down all the numbers in the order.<br><br>
+
+									<span class="bold">1st Rotor: </span>[16, 10, 13, 17, 11, 6, 4, 7, 18, 19, 2, 20, 12, 9, 1, 24, 22, 15, 8, 21, 23, 14, 5, 25, 3, 0]<br>
+									<span class="bold">2nd Rotor: </span>[22, 9, 1, 3, 17, 8, 23, 2, 6, 18, 16, 0, 25, 14, 4, 10, 19, 5, 21, 20, 24, 7, 13, 15, 12, 11]<br><br>
+
+									The principal of the school has a habit of greeting everyone with "good morning everyone", which indicated them to be the principal’s first words in the first message.<br><br>
+
+									The starting point of the rotors for each day was a secret which was known to all the teachers beforehand.<br><br>
+
+									Today's first words were an easy catch as that student was taking the message himself.<br><br>
+
+									Message: good morning everyone<br>
+									Encrypted: qlnt tpwpazv ximxhiii<br><br>       
+
+									Your task is to figure out today's starting point using a C++ program and the given information. Also, write a program to decrypt the messages using the starting point.<br><br>
+
+									<span class="bold">Input: </span>The encrypted message as a string of characters (only lowercase characters)<br><br>
+
+									<span class="bold">Output: </span>The decrypted message<br><br>
+
+									<span class="bold">Example</span><br><br>
+
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>wbdjpol cl zdha qt cbz wpoqi rmfa</td>
+											<td>meeting at noon in the staff room</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p id="question">
+									<span class="bold">Appendix</span><br><br>
+									The enigma machine generates pseudo-random shifts for each character in the message. In this case 2 rotors are used with random numbers (0 to 25) on the rotor disks. Let us take a toy example to understand how the rotor system works<br><br>
+
+									1st Rotor: [0, 1, 2]<br>
+									2nd Rotor: [0, 1, 2]<br><br>
+
+									Let the starting position be (0,1) and the message be 'abc xyz'. The rotor will operate in the following manner<br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>1st Rotor</th>
+											<th>2nd Rotor</th>
+											<th>Character Shift</th>
+											<th>Message</th>
+											<th>Encrypted</th>
+										</tr>
+										<tr>
+											<td>0</td>
+											<td>1</td>
+											<td>0 + 1 = 1</td>
+											<td>a</td>
+											<td>b</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>1</td>
+											<td>1 + 1 = 2</td>
+											<td>b</td>
+											<td>d</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>1</td>
+											<td>2 + 1 = 3</td>
+											<td>c</td>
+											<td>f</td>
+										</tr>
+										<tr>
+											<td>0</td>
+											<td>2</td>
+											<td>0 + 2 = 2</td>
+											<td>x</td>
+											<td>z</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>2</td>
+											<td>1 + 2 = 3</td>
+											<td>y</td>
+											<td>b</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>2</td>
+											<td>2 + 2 = 4</td>
+											<td>z</td>
+											<td>d</td>
+										</tr>
+										<tr>
+											<td>0</td>
+											<td>0</td>
+											<td>0 + 0 = 0</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>0</td>
+											<td>1 + 0 = 1</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>0</td>
+											<td>2 + 0 = 2</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+										<tr>
+											<td>...</td>
+											<td>...</td>
+											<td>...</td>
+											<td>...</td>
+											<td>...</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p id="question">
+									and so on<br>
+									Hence,<br>
+									Encrypted Message = ‘bdf zbd’<br><br>
+									<span class="bold">Note</span>
+								</p>
+
+								<ul style="margin-bottom: 0">
+									<li>No shift is applied on white spaces</li>
+									<li>The message can only consist of 26 alphabets, hence a shift of 1 on 'z' will take you back to the start and yield the encrypted character to be 'a'.</li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>Breaking RSA</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									When implementing the RSA algorithm, the major problem occurs when we have to compute the expression ($M^k$) mod $n$ where $M$ and $k$ are large integers. These huge values cause our calculators and computers to return overflow errors.<br><br>
+									Your task is easy, you have to write a program which is able to compute the value of the above expression for the given set of values of $M, k, n$ using specifically the modular arithmetic.<br><br>
+
+									Some properties of modular arithmetic that you may want to use are given as:<br><br>
+
+									<span class="bold">Multiplication property: </span>($A$ * $B$) mod $C$ = ($A$ mod $C$ * $B$ mod $C$) mod $C$
+									which gives rise to the <span class="bold">Exponentiation property: </span>($A^B$) mod $C$ = ( ($A$ mod $C)^B$) mod $C$<br><br>
+
+									<span class="bold">Input: </span>The input will consist of three lines which contain M, k and n respectively.<br><br>
+									<span class="bold">Output: </span>The value of the given expression<br><br>
+									<span class="bold">Limits: </span>M< 32767 and  N< 32767 and k < 32767<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>76<br>100<br>13</td>
+											<td>3</td>
+										</tr>
+										<tr>
+											<td>133<br>102<br>200</td>
+											<td>89</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>Mastermind AI</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									We present here a slightly modified version of the popular game of Mastermind. The primary goal of the game is to crack a four digit code set by another player. The code set has to satisfy the following conditions:<br><br>
+								</p>
+
+								<ul>
+									<li>All the digits should be integers in the interval 0 through 9.</li>
+									<li>No digit should be repeated.</li>
+								</ul>
+
+								<p id="question">
+									Examples of impermissible codes are, then, 1213, 1123, 1a23 and 2112. Suppose Alice sets the code and Bob has to guess what it is. He gives Alice, as input, a (valid) four digit "trial" code. What Alice outputs, then, is the number of "bulls" and "cows" in the trial code. A cow is defined as a case wherein a digit in the trial code occurs in the actual code but is not in the right place. A bull, on the other hand, means that a digit is not only in the code but also at the correct position. Bob will have ten guesses in which he has to make careful inferences and try to crack the code while minimizing the number of tries. Suppose Alice sets the code as 1234 and Bob's guess is 1546. Then Alice would tell him that his code has one bull and one cow — 1 is its correct position in Alice's code, thus it is a bull, while 4 is a cow as it is in the code but the position guessed is wrong. More examples later.<br><br>
+
+									Now, we’re Alice and you’re Bob.<br><br>
+									<span class="bold">Input: </span>A four digit code (separated by spaces, if you want)<br><br>
+									<span class="bold">Output: </span>A solution of the problem in the following format (of course, this does not indicate any sensible strategy):<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>Code: 1234</td>
+											<td>Guess 1: 6812<br>
+												Bulls: 0<br>
+												Cows: 2<br>
+												Guess 2: 1374<br>
+												Bulls: 2<br>
+												Cows: 1<br>
+												Guess 3: 1234<br>
+												Bulls: 4<br>
+												Cows: 0</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p id="question">
+									Also, we don’t want you spending time coding useless things like checking code. So <a href="https://drive.google.com/file/d/0Bw-KhSmwUfw3cnFfdFVnNFpYWkE/view?usp=sharing" style="text-decoration: none;">here</a> are all the functions you will need, as well as more instructions.
+								</p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div data-content="round-five">
+
+						<h1>Round Five &middot;</h1>
+						
+						<div id="easy">
+
+							<h3>Towers of Hanoi</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									The Tower of Hanoi puzzle was invented by the French mathematician Edouard Lucas in 1883. He was inspired by a legend that tells of a Hindu temple where the puzzle was presented to young priests. At the beginning of time, the priests were given three poles and a stack of 64 gold disks, each disk a little smaller than the one beneath it. Their assignment was to transfer all 64 disks from one of the three poles to another, with two important constraints. They could only move one disk at a time, and they could never place a larger disk on top of a smaller one. The priests worked very efficiently, day and night, moving one disk every second. When they finished their work, the legend said, the temple would crumble into dust and the world would vanish. Although the legend is interesting, you need not worry about the world ending any time soon. The number of moves required to correctly move a tower of 64 disks is, in fact, 18,446,744,073,709,551,615. At a rate of one move per second, that is 584,942,417,355 years! Clearly there is more to this puzzle than meets the eye. We want you to solve the puzzle for n disks. Supposing there are n disks at pole A, print the moves required to move them to pole C with the constraints we mentioned.<br><br>
+									<span class="bold">Input: </span>The number of disks at pole A at the beginning of the game<br><br>
+									<span class="bold">Output: </span>Valid moves to move them to pole C in the format given in the example.<br><br>
+									<span class="bold">Limits: </span>$1\leq  n\leq  64$<br><br>
+								</p>
+
+								<img src="img/r5easy.png"></img>
+
+								<p id="question">
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>1 A to B<br>
+												2 A to C<br>
+												3 B to C
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+
+						</div>
+
+						<div id="medium">
+
+							<h3>Game of Life</h3>
+							
+							<div class="question">
+								
+								<p id="question">
+									In Conway's Game of Life, cells in a grid are used to simulate biological cells. Each cell is considered to be either alive or dead. At each step of the simulation each cell's current status and number of living neighbors is used to determine the status of the cell during the following step of the simulation. In this one-dimensional version, there are $N$ cells numbered $0$ through $N-1$. The number of cells does not change at any point in the simulation. Each cell $i$ is adjacent to cells $i-1$ and $i+1$. Here, the indices are taken modulo $N$ meaning cells $0$ and $N-1$ are also adjacent to eachother. At each step of the simulation, cells with exactly one living neighbor change their status (alive cells become dead, dead cells become alive). For example, if we represent dead cells with a '0' and living cells with a '1', consider the state with 8 cells:<br><br>
+
+									01100101<br>
+
+								</p>
+
+								<ul>
+									<li>Cells 0 and 6 have two living neighbors.</li>
+									<li>Cells 1, 2, 3, and 4 have one living neighbor.</li>
+									<li>Cells 5 and 7 have no living neighbors.</li>
+								</ul>
+
+								<p id="question">
+									Thus, at the next step of the simulation, the state would be:<br>
+									00011101<br>
+									Given some state of the game, your task is to determine the state immediately preceding it. In some cases there may be more than one answer or no possible answer.<br><br>
+									<span class="bold">Input: </span>Input will begin with an integer $t$, the number of 	test cases.
+									Each test case consists of a single line.<br><br>
+									<span class="bold">Output: </span>For each test case, output the state of the game that precedes the given state.
+									If there is no possible solution, print "No solution".
+									If there are multiple possible solutions, print "Multiple solutions".<br><br>
+									<span class="bold">Limits: </span>$1\leq  t \leq  100$. 
+									Each test case can be from 3 to 20 characters long.<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table style="margin-bottom: 0">
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>3<br>
+											00011101<br>
+											000001<br>
+											11110</td>
+											<td>01100101<br>
+											No solution<br>
+											10010</td>
+										</tr>
+									</tbody>
+								</table>
+
+							</div>
+							
+						</div>
+
+						<div id="hard">
+
+							<h3>The 14-15 Puzzle</h3>
+							
+							<div class="question">
+
+								<img src="img/r5hard.png" style="margin-bottom: 2.5rem"></img>
+								
+								<p id="question">
+									The reason for this man’s distress is the infamous 14-15 puzzle, which quite a lot of us are familiar with. You might have played this with scrambled images. If you haven’t, the goal is to get the configuration of numbers into the right order. We can slide one tile into the vacant place, which vacates another, into which we can slide another tile, and so on. In the given image, the goal is to get a final configuration in which the 14 and 15 are in the right order.<br><br>
+
+									When Sam Loyd introduced the world to this wonderful enigma, filthy commoners like him tried, and failed, to solve it. What did we educated computer scientists do? We proved that it’s impossible to solve! (Well, one theory is that we were lazy, but anyway) you need to step into the shoes of the greats, and tell us whether a given configuration of an $m \times n$ grid is solvable.<br><br>
+									<span class="bold">Input: </span>The first line gives $m$ and $n$, the number of rows and columns, respectively.
+									The next $m-1$ lines give $n$ numbers and the $m^th$ line gives $n-1$ numbers. Of course, the numbers are a rearrangement of $1, 2, 3, … , mn - 1$.<br><br>
+									<span class="bold">Output: </span>Whether the given configuration is solvable.<br><br>
+									<span class="bold">Limits: </span>$1 \leq  m, n \leq  100$<br><br>
+									<span class="bold">Example</span><br><br>
+								</p>
+
+								<table>
+									<tbody>
+										<tr>
+											<th>Input</th>
+											<th>Output</th>
+										</tr>
+										<tr>
+											<td>4 4<br>
+												1 2 3 4<br>
+												5 6 7 8<br>
+												9 10 11 12<br>
+												13 15 14</td>
+											<td>Not solvable</td>
+										</tr>
+									</tbody>
+								</table>
+
+								<p id="question">
+									<span class="bold">Hint: </span>You may find it useful to think about the antisymmetric tensor.
+								</p>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- <div class="question">
+			
+			<p id="question"><strong>1</strong> Trademarked Transaction</p>
+      		<form class="cryptx">
+				<input type="text" placeholder="Answer" name="answer" class="answer-box" autofocus autocomplete="off">
+				<input type="submit">
+			</form>
+
+		</div> -->
+
+		<script src="//use.typekit.net/dbe5tbi.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+
+		<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+
+		<script type="text/javascript">
+
+		$(".list").click(function() {
+			$(this).find("ul").slideDown();
+			$(this).find("i").css("display", "inline");
+		});
+
+		$(".list i").click(function(event) {
+			event.stopPropagation();
+			$(this).parent().find("ul").slideUp();
+			$(this).css("display", "none");
+		});
+
+		$(".list ul li").click(function() {
+			var difficulty = $(this).find("a").data("navigate");
+			var roundCount = $(this).parent().parent().attr('id');
+			$("div[data-content]").css("display", "none");
+			$('div[data-content=' + roundCount + ']').css("display", "block");
+			var id = '#' + difficulty;
+			$('div[data-content=' + roundCount + ']').find('div[id]').css("display", "none");
+			$('div[data-content=' + roundCount + ']').find(id).css("display", "block");
+			if (roundCount == "round-one") {
+				temp = "Round One &middot;";
+			} else if (roundCount == "round-two") {
+				temp = "Round Two &middot;";
+			} else if (roundCount == "round-three") {
+				temp = "Round Three &middot;";
+			} else if (roundCount == "round-four") {
+				temp = "Round Four &middot;";
+			} else if (roundCount == "round-five") {
+				temp = "Round Five &middot;";
+			}
+			var capitalized = difficulty[0].toUpperCase() + difficulty.substring(1);
+			var newText = temp + ' ' + capitalized;
+			$('div[data-content=' + roundCount + ']').find("h1").html(newText);
+		});
+
+		</script>
+
+	</body>
+
+</html>
