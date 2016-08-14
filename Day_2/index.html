@@ -100,13 +100,10 @@
 					<div data-content="landing">
 					
 						<h1>Programming &middot; X 2016</h1>
-						<p>Welcome to Day 2 of the Programming Event of MINET X 2016. We hope you have as much fun solving the problems as we had making them. You have been provided with the Code::Blocks and Turbo C++ environments.
-
-						The event will be three hours long. There are five rounds and each round comprises three questions. Your answers will have a direct bearing on your team’s stock prices. Questions that are in the Easy, Medium and Hard sections will give you an increment in stock prices in the ratio 1:2:4 respectively. 
-
-						Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer a question perfectly on your third try, you get one-fourth of the maximum points. 
-
-						If you have any questions about the problems, do not be afraid to ask them of us. 
+						<p>Welcome to Day 2 of the Programming Event of MINET X 2016. We hope you have as much fun solving the problems as we had making them. You have been provided with the Code::Blocks and Turbo C++ environments.<br><br>
+						The event will be three hours long. There are five rounds and each round comprises of three questions. Your answers will have a direct bearing on your team’s stock prices. Questions that are in the Easy, Medium and Hard sections will give you an increment in stock prices in the ratio 1:2:4 respectively.<br><br>
+						Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer a question perfectly on your third try, you get one-fourth of the maximum points.<br><br>
+						If you have any questions about the problems, do not be afraid to ask us.
 						Have fun, and Make beautiful programs. Best of luck!</p>
 					</div>
 
@@ -123,7 +120,7 @@
 								<p id="question">
 									Define an anti-prime as a number that has more divisors than any number below it. Given a number $n$, find the two largest anti-primes below $n$.
 <br><br>
-									<span class="bold">Input: </span>A natural number $n$<br><br>
+									<span class="bold">Input: </span>A natural number $n$.<br><br>
 									<span class="bold">Output: </span>The two largest anti-primes below $n$. <br><br>
 									<span class="bold">Limit: </span>$0 \leq  n \leq  2^{31}-1$ <br><br>
 									<span class="bold">Example</span><br><br>
@@ -230,10 +227,10 @@ Assuming optimal play, what is the probability that $N$ cadets will win the game
 							<h3>Numberpad Knight</h3>
 							
 							<div class="question">
-								Consider placing a chess knight at any digit on a standard phone number pad without 0 and moving it around with any number of normal L-shaped jumps, tracing out a positive integer. Your task is to tell whether the number can be formed by a knight.
+								Consider placing a chess knight on any digit on a standard phone number pad without 0 and moving it around with any number of normal L-shaped jumps, tracing out a positive integer. Your task is to tell whether the number can be formed by a knight.
 								<p id="question">
 								<br><br>
-								<span class="bold">Input: </span>The first line of input consists of integer $N$.<br><br>
+								<span class="bold">Input: </span>An integer $N$.<br><br>
 								<span class="bold">Output: </span>Print either $1$ or $-1$.<br><br>
 								<span class="bold">Example</span><br><br>
 								</p>
@@ -271,9 +268,9 @@ You are to determine the minimum number of such rooks required to wipe out all t
 The next  $n$ lines contain $n$ symbols i.e. $0$ or $1$. The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
 
 								<br><br>
-								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co - ordinate of each rook in ordered pair form, i.e. $(x,y)$.
+								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co-ordinate of each rook in ordered pair form, i.e. $(x,y)$.
 <br>Or<br>
--1 , if not possible .<br><br>
+$-1$, if not possible .<br><br>
 								<span class="bold">Limit: </span>$2 \leq  n \leq  10000$<br><br>
 								<span class="bold">Example</span><br><br>
 								</p>
@@ -317,7 +314,7 @@ The next  $n$ lines contain $n$ symbols i.e. $0$ or $1$. The $ j-th$ symbol in $
 									<span class="bold">Input: </span>The first line of the input contains three integers: $h$, $w$, $n$ — the sides of the board and the number of black cells.Next n lines contain the description of black cells. The i-th of these lines contains numbers $r_i$, $c_i$ — the number of the row and column of the i-th cell.
                                     It is guaranteed that the upper left and lower right cell are white and all cells in the description are distinct.
 <br><br>
-									<span class="bold">Output: </span>Print a single line — the remainder of the number of ways to move Gerald's pawn from the upper left to the lower right corner modulo $10^9 + 7$.
+									<span class="bold">Output: </span>Print a single line — the number of ways in which Gerald can move his pawn from the upper left to the lower right corner modulo $10^9 + 7$.
 									<br><br>
 									<span class="bold">Limits</span><br>$1 \leq r_i \leq h, 1 \leq c_i \leq w$<br><br>
 									<span class="bold">Example</span><br><br>
@@ -364,9 +361,8 @@ The moment the value of $[v / (k^p)]= 0$, Chanaz stops and goes to sleep. Once s
 <br><br>
 Chanaz is wondering, what minimum value $v$ can take to let her catch not less than n Pokémon before she falls asleep. Can you help her?
 							<br><br>
-								<span class="bold">Input: </span>The first two lines contain $x$ and $y$ respectively.
-								The third line contains $x$ numbers giving $z$ for each of the $x$ weeks.<br><br>
-								<span class="bold">Output: </span>The number of containers used.<br><br>
+								<span class="bold">Input: </span>The input consists of two integers $n$ and $k$, separated by spaces — the Number of pokemon she has to catch, and the productivity reduction coefficient.<br><br>
+								<span class="bold">Output: </span>Print only one integer — the minimum value of $v$ that lets Chanaz catch $n$ Pokemon in one night.<br><br>
 								<span class="bold">Limit: </span>$1 < x \leq 10^9$ and
 								$2 \leq k \leq 10$<br><br>
 								<span class="bold">Example</span><br><br>
@@ -414,7 +410,7 @@ Find the sum $S$ of these number to find the combined HP of the team.<br><br>
 The next few lines of the output are the individual HPs of each Pokémon in the team.
 <br><br>
 									<span class="bold"><b>Limits:</b> </span>$1 < n \leq  8$<br><br>
-									<span class="bold">Example</span><br><br>
+									<span class="bold"><b>Example</b></span><br><br>
 								</p>
 
 								<table style="margin-bottom:0">
@@ -552,17 +548,17 @@ Write a program to find $L$. Take $g = 10m/s^2$ <br><br>
 									An electron moves out from an atom. It moves $k[0]$ units along the positive $x$-axis and then describes that many units of arc in counter-clockwise direction. This is counted as one move. Then it moves $k[1]$ units along radius and describes an arc of $k[1]$ units. It repeats this motion till $k[3]$ units. Then it again moves $k[0]$ and repeats the process till it crosses positive $x$-axis. Write a program to find how many moves it requires to cross the positive $x$-axis.
 									<br><br>
 
-									<span class="bold">Input: </span>The first line contains a total of four space -separated integers depicting $k[0]$ ,$k[1]$,$k[2]$,$k[3]$ which are length of each path it moves.<br><br>
-									<span class="bold">Output: </span>$M$ number of moves.<br><br>
-									<span class="bold">Limits: </span>$0 < k  \leq 10000$<br><br>
-									<span class="bold">Example</span><br><br>
+									<span class="bold"><b>Input: </b></span>The first line contains a total of four space -separated integers depicting $k[0]$ ,$k[1]$,$k[2]$,$k[3]$ which are length of each path it moves.<br><br>
+									<span class="bold"><b>Output: </b></span>$M$ number of moves.<br><br>
+									<span class="bold"><b>Limits: </b></span>$0 < k  \leq 10000$<br><br>
+									<span class="bold"><b>Example</b></span><br><br>
 								</p>
 
 								<table style="margin-bottom: 0">
 									<tbody>
 										<tr>
-											<th>Input</th>
-											<th>Output</th>
+											<th><b>Input</b></th>
+											<th><b>Output</b></th>
 										</tr>
 										<tr>
 											<td>2 3 4 5</td>
@@ -586,20 +582,20 @@ Write a program to find $L$. Take $g = 10m/s^2$ <br><br>
 							<div class="question">
 								
 								<p id="question">
-									Consider $n$ balls, $B_1 , . . . , B_n$, having masses $m1, m2, . . . , mn $ placed in a vertical stack with $B_1$ at the bottom and $B_n$ at the top. The bottom of $B_1$ is at a height $h$ above the ground, and the bottom of $B_n$ is a height $h + L$  above the ground.
+									Consider $n$ balls, $B_1 , . . . , B_n$, having masses $m_1, m_2, . . . , m_n $ placed in a vertical stack with $B_1$ at the bottom and $B_n$ at the top. The bottom of $B_1$ is at a height $h$ above the ground, and the bottom of $B_n$ is a height $h + L$  above the ground.
 The task is to find, firstly, the minimum number of balls such that the topmost ball attains a height of $H$ metres when it bounces back, after the stack is dropped from a height of $h$ metres. Assume that the balls still bounce elastically (which is a bit absurd here). Ignore wind resistance, etc., and assume that $l$ is negligible.<br><br>
 								</p>
-									<span class="bold">Input: </span>Height $h$ from which the balls would be dropped and height $H$ to which the topmost ball will go.<br><br>
-									<span class="bold">Output: </span>$N$ number of balls.<br><br>
-									<span class="bold">Limits</span> $0< h \leq 15$<br><br>
-									<span class="bold">Example</span><br><br>
+									<span class="bold"><b>Input: </b></span>Height $h$ from which the balls would be dropped and height $H$ to which the topmost ball will go.<br><br>
+									<span class="bold"><b>Output: </b></span>$N$ number of balls.<br><br>
+									<span class="bold"><b>Limits:</b></span> $0< h \leq 15$<br><br>
+									<span class="bold"><b>Example</b></span><br><br>
 								</p>
 
 								<table>
 									<tbody>
 										<tr>
-											<th>Input</th>
-											<th>Output</th>
+											<th><b>Input</b></th>
+											<th><b>Output</b></th>
 										</tr>
 										<tr>
 											<td>1 1000</td>
@@ -627,7 +623,7 @@ The task is to find, firstly, the minimum number of balls such that the topmost 
 								
 								<p id="question">
 
-There are $N$ applicants and $N$ colleges. Each college ranks all applicants in order of their preference ${A_1, A_2, A_3…A_N}$. Similarly, each applicant ranks all colleges according their preference ${C_1, C_2, C3…C_N}$. If the resulting set of pairs contains no pairs of form ${A_1,C_2} $, ${A_2, C_1}$ such that $A_1$prefers $C_1$to $C_2$and $C_1$prefers $A_1$to $A_2$ then the pairings are said to stable.<br><br>
+There are $N$ applicants and $N$ colleges. Each college ranks all applicants in order of their preference ${A_1, A_2, A_3 … A_N}$. Similarly, each applicant ranks all colleges according their preference ${C_1, C_2, C_3 … C_N}$. If the resulting set of pairs contains no pairs of form ${(A_1,C_2)} $, ${(A_2, C_1)}$ such that $A_1$prefers $C_1$to $C_2$and $C_1$prefers $A_1$to $A_2$ then the pairings are said to stable.<br><br>
 You need to figure out the stable solution and when there is no solution available output $-1$.
 <br><br>
 									<span class="bold">Input: </span>
@@ -681,7 +677,7 @@ Consider a game of Powered Nim where the computer is Player 1 and the checker is
 The rules of the game are as follows:<br>
 You will be given an integer $N$. A number has to be chosen in turns by  Player 1  and Player 2 from the set ${1,...,N}$. But, when someone has chosen a number they can also remove some or all powers of that number if they wish to. After a series of eliminations the one who can’t choose a number loses.<br><br>
 Player 1 needs to play the game in a way where it always wins and when it’s impossible for it to win the output is -1.<br><br>
-									<span class="bold">Input: </span>The first line of input will give you the value of $N$. The rest of the inputs of ‘Player 2’ are open.<br><br>
+									<span class="bold">Input: </span>The first line of input will give you the value of $N$. The rest of the inputs of Player 2 are open.<br><br>
 									<span class="bold">Output: </span>Print the steps taken by player 1 and  the winner of the game.<br><br>
 									<span class="bold">Limits: </span>$0< N < 50$<br><br>
 									<span class="bold">Example</span><br><br>
@@ -713,17 +709,16 @@ Player 1 wins.</td>
 							
 							<div class="question">
 								<p id="question">
-<center><img src="img/r5h.jpg" style="width:50%;"></center>
 Alice and Bob are playing a game. A single pawn is placed on a grid of  $X*Y$ size. Some cells on the grid have been marked as impassable. You can move the  pawn a positive number of steps along the row or column towards the origin. The pawn is not allowed to land on an impassable cell. Alice and Bob alternate moves, with Alice going first. The first player unable to make a move loses.<br>
  Assuming that  Bob is the checker your task is to make Alice play in a way that she always wins. When it is impossible for her to win, print $-1$.
 <br><br>
 
-									<span class="bold">Input: </span>
+									<span class="bold"><b>Input: </b></span>
 The inputs of Bob (the checker) are open. Feel free to take the inputs any way you prefer but the method below is recommended.<br><br>
 The input will begin with an integer $N$, the number of impassable cells.$N$ lines consist of  2 integers each: the $X$ and $Y$ coordinates of an impassable cell. Following that are 2 integers: the $X$ and $Y$ coordinates of the starting position of the pawn.
 
 									<br><br>
-									<span class="bold">Output: </span>Print out the steps taken by Alice and the winner of the game.<br><br>
+									<span class="bold"><b>Output: </b></span>Print out the steps taken by Alice and the winner of the game. when it is not possible for her to win print $-1$<br><br>
 									<span class="bold">Limits: </span>$0 < $N$ < 10^5$<br><br>
 									<span class="bold">Example</span><br><br>
 								</p>
