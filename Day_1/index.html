@@ -173,8 +173,27 @@ So if we were to run the string, $w = “100101”$, the computation would be as
 	<li>$\delta(q_2, 1) = q_3$</li>
 </ol>
 Since $q_3$ is not one of the accept states, the string $w$ will not be accepted by the DFA.<br>
-Also, $q_3$ here is a <b>dump state</b>.
-						</div>
+Also, $q_3$ here is a <b>dump state</b>.<br><br>
+
+A DFA that accepts a string $w$, if the <b>length is divisible by 4</b>.<br><br>
+<img src="img/DFAe4.png" width="100%"><br><br>
+For this Example:
+<ul>
+	<li>$Q = {q_0, q_1, q_2, q_3}$</li>
+	<li>$\Sigma = \{0,1\}^*$ </li>
+	<li>$\delta(q_0, 0) = q_0$ and $\delta(q_0,1)=q_1$ and so on.</li>
+	<li>$q_0$ is the start state.</li>
+	<li>$F = \{q_0\}$</li>
+</ul>
+So if we were to run the string, w = “1101”, the computation would be as follows:
+<ul>
+	<li>$\delta(q_0, 1) = q_1$</li>
+	<li>$\delta(q_1, 0) = q_2$</li>
+	<li>$\delta(q_2, 0) = q_3$</li>
+	<li>$\delta(q_0, 1) = q_0$</li>
+</ul><br>
+Since $q_0$ is the accept state, the string $w$ will be accepted by the DFA.
+</div>
 						
 					</div>
 
