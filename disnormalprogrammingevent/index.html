@@ -379,8 +379,107 @@ A TM can be formally described as a 7-tuple $(Q, X, \Sigma, δ, q_0, B, F)$ wher
 <li>$q_0$ is the initial state</li>
 <li>$B$ is the blank symbol.</li>
 <li>$F$ is the set of final states.</li>
-</ul>
+</ul><br><br>
+<b>Examples</b><br>
+<b>Note:</b>We have made a Turing Machine Simulator <a href="http://minet.co/disturingmachine01/" target="_blank">here</a>. You are expected to solve all Turing Machine related questions on the simulator.<br><br>
+<ol>
+	<li>
+		Let us consider a TM for accepting $\{a^nb^nc^n|n ≥ 1\}$.<br>
+<img src="img/TMe1.png" width="100%">
+		<ul>
+			<li>Input alphabet: $\Sigma = \{ a, b, c \}$.</li>
+			<li>States: $Q = \{ q_0, q_1, q_2, q_3, q_{accept}, q_{reject} \}$. </li>
+			<li>Tape alphabet: $\Gamma = \{ a, b, c, A, B, C, ☐ \}$.</li>
+			<li>Transitions:</li>
+			<ol>
+				<li>$q_0$</li>
+				<ul>
+					<li>$( q_0, a ) → ( q1, A, right )$</li>
+					<li>$( q_0, ☐ ) → (q_{accept}, ☐, right )$</li>
+					<li>$( q_0, \{ B, C \} ) → ( q_0, •, right )$</li>
+					<li>$( q_0, other ) → ( q_{reject}, •, right )$</li>
+				</ul>
+				<li>$q_1$</li>
+				<ul>
+					<li>$( q_1, \{ a, B \} ) → ( q_1, •, right )$</li>
+					<li>$( q_1, b ) → ( q_2, B, right )$</li>
+					<li>$( q_1, other ) → ( q_{reject} , •, right )$</li>
+				</ul>
+				<li>$q_2$</li>
+				<ul>
+					<li>$( q_2, \{ b, C \} ) → ( q_2, •, right )$</li>
+					<li>$( q_2, c ) → ( q_3, C, left )$</li>
+					<li>$( q_2, other ) → ( q_{reject} , •, right )$</li>
+				</ul>
+				<li>$q_3$</li>
+				<ul>
+					<li>$( q_3, \Gamma − \{A\} ) → ( q_3, •, left )$</li>
+					<li>$( q_3, A ) → ( q_0, •, right )$</li>
+				</ul>
+			</ol>
+			<li>Writing a • on the tape means writing the same symbol that was read.</li>
+		</ul>
+	</li>
 
+This program works on the simple logic of keeping a count. If it sees ‘a’ it marks it as read changes it to ‘A’ and continues to look for ‘b’ after it sees one it marks it as read  changes it to ‘B’ and continues looking for ‘c’ after it sees a ‘c’ it changes it to ‘C’. After seeing ‘a’, ’b’ and ‘c’ it looks for another set of ‘a’, ’b’ and ‘c’ until it sees a ‘☐’ symbol and it accepts the input. Else if it is not able to complete a set of ‘a’, ‘b’ and ’c’ it rejects the input<br><br>
+<b>The Working</b><br>
+<ul>
+	<li>$q_0$ : Looks for an ‘a’ when it sees an ‘a’ it changes it to ‘A’  goes to $q_1$</li>
+	<ul>
+		<li>If it sees ‘☐’ it goes to $Q_{accept}$.</li>
+        <li>It skips all  ‘C’ and  ‘B’.</li>
+        <li>If it sees a ‘b’ or ‘c’ or ‘A’ it goes to $Q_{reject}$</li>
+	</ul>
+	<li>$q_1$ : Looks for a  ‘b’ when it finds a ‘b’ it changes it to ‘B’ goes to $q_2$</li>
+	<ul>
+		<li>It skips all  ‘a’ and  ‘B’.</li>
+        <li>If it sees a  ‘c’ it goes to $Q_{reject}$</li>
+	</ul>
+	<li>$q_2$ : Looks for a ‘c’ when it finds a ‘c’ it changes it to ‘C’ goes to $q_3$</li>
+	<ul>
+		<li>It skips all  ‘b’ and  ‘C’.</li>
+        <li>If it sees a  ‘a’ or ‘☐’ it goes to $Q_{reject}$.</li>
+	</ul>
+	<li>$q_3$ : Skips all alphabet except ‘A’.</li>
+	<ul>
+		<li>If it sees a ‘A’ it goes to $q_0$.</li>
+	</ul>
+</ul><br>
+<b>An Accepting Run</b><br>
+The <span color="Blue">Blue</span> symbol indicates the current tape head position.<br>
+<img src="img/TMe2.png" width="100%">
+
+
+<br>
+<li>
+Let us consider a TM for accepting $ \{0^{2^n} | n \geq 1 \} $.<br>
+<ul>
+<li>Input alphabet: $\Sigma = {0}$. </li>
+<li>States: $Q = \{ q_1, q_2, q_3, q_4, q_5, q_{accept}, q_{reject} \}$. </li>
+<li>Tape alphabet: $\Gamma = \{ 0, x, ☐ \}$. </li>
+<li>Transitions δ described in figure</li>
+</ul><br>
+<img src="img/TMe3.png" width="100%">
+On Input $w=0000$
+<center><img src="img/TMe4.png" width="75%"></center>
+
+
+</li>
+<li>
+Let us consider a TM for accepting $\{w$ # $w|w = {0,1}^*\}$.
+<ul>
+<li>States: $Q = \{ q_1, q_2, q_3, q_4, q_5,q_6, q_7, q_8,  q_{accept}, q_{reject} \}$.</li>
+<li>Input alphabet: $\Sigma =$ $\{ 0,1, $ # $ \} $</li>
+<li>Tape alphabet: $\Gamma$ = { 0,1,$  #  ,x, ☐ }.</li>
+<li>Transitions δ described in figure</li>
+<img src="img/TMe4.png" width="50%">
+
+
+
+</ul>
+</li>
+</ol>
+<br>
 </p>
 						</div>
 </div>
