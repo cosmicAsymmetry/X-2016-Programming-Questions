@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-
 		<title>Programming &middot; MINET X</title>
-
 		<meta charset="utf-8">
 		<meta name="author" content="The MINET Team">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		<link rel="stylesheet" type="text/css" href="css/app.css">
 		<link rel="stylesheet" type="text/css" href="css/skeleton.css">
 		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
 		<link rel="icon" type="image/png" href="img/icon.png">
 		<link rel="apple-touch-icon-precomposed" href="img/icon.png">
 		<meta name="theme-color" content="#2979ff">
-
 	</head>
 
 	<body>
@@ -199,51 +193,98 @@ Since $q_0$ is the accept state, the string $w$ will be accepted by the DFA.
 
 					<div data-content="round-three">
 
-						<h1>Qubits</h1>
+						<h1>Nondeterministic Finite Automata</h1>
 						
 						<div class="question">
 							
 							<p id="question">
-								
-								We now reach the fundamental unit of quantum computation, the qubit. Qubits (pronounced “cue-bit”) or quantum bits are basic building blocks that encompass all fundamental quantum phenomena. They provide a mathematically simple framework in which to introduce the basic concepts of quantum physics. Qubits are 2-state quantum systems. For example, if we set $k = 2$, the electron in the Hydrogen atom can be in the ground state or the first excited state, or any superposition of the two. Other examples of the implementation of a qubit are the polarisation of a photon, or the magnetic moment of an electron. Note that all of these are two-state systems: ground-excited, horizontal-vertical, up-down, etc. 
+								<b>Introduction</b><br><br>
+								An NFA, similar to a DFA, consumes a string of input symbols.  For each input symbol, it transitions to a new state until all input symbols have been consumed. Unlike a DFA, it is non-deterministic, i.e., for some state and input symbol, the next state may be nothing or one or two or more possible states. Thus, in the formal definition, the next state is an element of the power set of the states, which is a set of states to be considered at once. The notion of accepting an input is similar to that for the DFA. When the last input symbol is consumed, the NFA accepts if and only if <b>there is some set of transitions that will take it to an accepting state.</b> Equivalently, it rejects, if, no matter what transitions are applied, it would not end in an accepting state. 
 								<br><br>
-								The state of a qubit can be written as a unit (column) vector
-								$$\ket{\psi}=\begin{pmatrix}\alpha \\ \beta \end{pmatrix}$$
-								In Dirac notation, this may be written as:
-								$$\ket{\psi}=a \ket{0} + b \ket{1}$$
-								where $a, b  \in C$ and $|a|^2+|b|^2=1$.<br><br>
+								<b>Notation and Rules</b><br>
+								It is defined as a five tuple, $N = (Q, \sigma, \delta, q_0, F)$ where:<br>
+								<ul>
+	<li>$Q$ is the set of states. This is a set of all states in the DFA, even the start state, $q_0$ and final set of states $F$ are present in this set.</li>
+	<li>$\Sigma$ is the language of the DFA.</li>
+	<li>$\delta$ is transition function that takes two arguments a state and an input symbol and it returns a subset of $Q$ that is, $Q \times (\Sigma \cup \{\epsilon\}) \rightarrow 2^Q$ where $2^Q$ is the power set of $N$ (the set of subsets of $Q$).</li>
+	<li>$q_0$ is the start state.</li>
+	<li>$F$ is the set of accept states</li>
+</ul><br>
+$\epsilon$ marks state transitions that do not consume any input. The symbol ε does not belong to any alphabet These transitions thus express the non-determinism of the automaton.<br><br>
+<b>Examples of NFAs</b><br>
+<ol>
+	<li>
+An NFA which accepts a string $w$, if it ends with the substring $“00”$.<br>
+<img src="img/NFAe1.png" width="100%">
+For this example:
+<ul>
+	<li>$Q = {q_0, q_1, q_2}$</li>
+	<li>$\Sigma = \{0,1\}^*$ </li>
+	<li>$q_0$ is the start state.</li>
+	<li>$F = \{q_2\}$</li>
+</ul><br>
+For the string “0100”, the computation is as follows:
+<table>
+	<th>Input Symbol</th>
+	<th>States</th>
+	<tr>
+		<td>$0$</td>
+		<td>${q_0, q_1}$</td>
+	</tr>
+	<tr>
+		<td>$1$</td>
+		<td>${q_0}$</td>
+	</tr>
+	<tr>
+		<td>$0$</td>
+		<td>${q_0, q_1}$</td>
+	</tr>
+	<tr>
+		<td>$0$</td>
+		<td>${q_0, q_1}$</td>
+	</tr>
+</table><br>
+Since at least one of the computation paths leads to an accept state($q_2$), $w$ is accepted by the NFA.<br><br>		
+	</li>
+	<li>
+An NFA which accepts a string $w$,  where length of $w$ is either divisible by 2, or 3, or both.
+<img src="img/NFAe2.png" width="100%">
+For the string “11111”, the computation would be as follows:<br>
+<table>
+	<th>Input Symbol</th>
+	<th>States</th>
+	<tr>
+		<td>$\epsilon$</td>
+		<td>$\{q_0,q_3\}$</td>
+	</tr>
+	<tr>
+		<td>$1$</td>
+		<td>$\{q_2,q_4\}$</td>
+	</tr>
+	<tr>
+		<td>$1$</td>
+		<td>$\{q_1,q_5\}$</td>
+	</tr>
+	<tr>
+		<td>$1$</td>
+		<td>$\{q_2,q_3\}$</td>
+	</tr>
+	<tr>
+		<td>$1$</td>
+		<td>$\{q_1,q_4\}$</td>
+	</tr>
+	<tr>
+		<td>$1$</td>
+		<td>$\{q_2,q_5\}$</td>
+	</tr>
+</table><br>
+Since $q_2$ and $q_5$ are not part of the accept states, the string won’t be accepted.
 
-								This linear superposition $\ket{\psi}=a \ket{0} + b \ket{1}$ is part of the private world of the electron. For us to know the electron’s state, we must make a measurement. Making a measurement gives us a single classical bit of information — 0 or 1. The simplest measurement is in the standard basis, and measuring $\ket{\psi}$ in this ${0,1}$ basis yields 0 with probability $|a|^2$, and 1 with probability $|b|^2$.<br><br>
+	</li>
+</ol>
 
-								One important aspect of the measurement process is that it alters the state of the qubit: the effect of the measurement is that the new state is exactly the outcome of the measurement. I.e., if the outcome of the measurement of  $\ket{\psi}=a \ket{0} + b \ket{1}$ yields 0, then following the measurement, the qubit is in state $\ket{0}$. This implies that you cannot collect any additional information about $a,b$ by repeating the measurement.<br><br>
 
-								More generally, we may choose any orthogonal basis ${\ket{v}, \ket{w}}$ and measure the qubit in that basis. To do this, we rewrite our state in that basis: $\ket{\psi}=a’ \ket{v} + b’ \ket{w}$. The outcome is $v$ with probability $|a’|^2$ , and $w$ with probability $|b’|^2$. If the outcome of the measurement on $\ket{\psi}$ yields v, then as before, the the qubit is then in state $\ket{v}$.
-								What are the allowable quantum states of systems of several particles? The answer to this is enshrined in the addendum to the first postulate of quantum mechanics: the superposition principle. In this chapter we will consider a special case, systems of two qubits. In keeping with our philosophy, we will first approach this subject naively, without the formalism of the formal postulate. This will facilitate an intuitive understanding of the phenomenon of quantum entanglement — a phenomenon which is responsible for much of the ”quantum weirdness” that makes quantum mechanics so counter-intuitive and fascinating.<br><br>
-
-								<span class="bold">Two Qubits</span><br><br>
-
-								Now let us examine a system of two qubits. Consider the two electrons in two hydrogen atoms, each regarded as a 2-state quantum system: Since each electron can be in either of the ground or excited state, classically the two electrons are in one of four states – 00, 01, 10, or 11 – and represent 2 bits of classical information. By the superposition principle, the quantum state of the two electrons can be any linear combination of these four classical states:
-								$$\ket{\psi}=a_{00}\ket{00}+a_{01}\ket{01}+a_{10}\ket{10}+a_{11}\ket{11}$$
-
-								where $a_{ij}\in C$ and $\Sigma |a_{ij}|^2=1.$ Of course, this is just Dirac notation for the unit vector
-								$$\ket{\psi}=\begin{pmatrix}a_{00} \\ a_{01}\\ a_{10} \\ a_{11} \end{pmatrix}$$
-
-								As in the case of a single qubit, even though the state of two qubits is specified by four complex numbers, most of this information is not accessible by measurement. In fact, a measurement of a two qubit system can only reveal two bits of information. The probability that the outcome of the measurement is the two bit string $pq$ is $|a_{pq}|^2$ . Moreover, following the measurement the state of the two qubits is $\ket{pq}$. i.e. the qubit, after measurement, has definite states for both the qubits ($\ket{p}$ and $\ket{q}$ respectively).<br><br>
-
-								An interesting question comes up here: what if we measure just the first qubit? What is the probability that the outcome is 0? This is simple. It is exactly the same as it would have been if we had measured both qubits: Pr (1st bit = 0) = Pr (00) + Pr (01) = $|a_{00}|^2+|a_{01}|^2$. Ok, but how does this partial measurement disturb the state of the system?<br><br>
-
-								The answer is obtained by an elegant generalisation of our previous rule for obtaining the new state after a measurement. The new superposition is obtained by crossing out all those terms of $\ket{\psi}$ that are inconsistent with the outcome of the measurement (i.e. those whose first bit is 1). Of course, the sum of the squared amplitudes is no longer 1, so we must renormalise to obtain a unit vector:
-								$$\ket{\psi_{new}}=\frac{a_{00}\ket{00}+a_{01}\ket{01}}{|a_{00}|^2+|a_{01}|^2}$$
-
-								<span class="bold">Entanglement</span><br><br>
-
-								Suppose the first qubit is in the state $\frac{3}{5} \ket{0}+\frac{4}{5} \ket{1}$ and the second qubit is in the state $\frac{1}{\sqrt{2}}\ket{0}-\frac{1}{\sqrt{2}} \ket{1}$, then the joint state of the two qubits is 
-								$$(\frac{3}{5} \ket{0}+\frac{4}{5} \ket{1})(\frac{1}{\sqrt{2}}\ket{0}-\frac{1}{\sqrt{2}})$$
-								$$=\frac{3}{5 \sqrt{2}} \ket{00}-\frac{3}{5 \sqrt{2}} \ket{01}+\frac{4}{5 \sqrt{2}} \ket{10}-\frac{4}{5 \sqrt{2}} \ket{11}$$ 
-
-								More generally, if the state of the first qubit is $a_0 \ket{0}+a_1 \ket{1}$ and the state of the second qubit is $b_0 \ket{0} + b_1 \ket{1}$, then the joint state of the two qubits is $a_0b_0 \ket{00} + a_0b_1 \ket{01} + a_1b_0 \ket{10} + a_1b_1 \ket{11}$.<br><br>
-
-								Can every state of two qubits be decomposed in this way? Our classical intuition would suggest that the answer is obviously affirmative. After all each of the two qubits must be in some state $ a \ket{0} + b \ket{1}$, and so the state of the two qubits must be the product. In fact, there are states such as $$ \ket{\Phi ^+}= \frac{1}{\sqrt{2}} (\ket{00} + \ket{11})$$ (known as the Bell state) which cannot be decomposed in this way as a state of the first qubit and that of the second qubit. Can you see why? Such a state is called an entangled state. When the two qubits are entangled, we cannot determine the state of each qubit separately. The state of the qubits has as much to do with the relationship of the two qubits as it does with their individual states. If the first (resp. second) qubit of $\ket{\Phi ^+}$ is measured then the outcome is 0 with probability 1/2 and 1 with probability 1/2. However if the outcome is 0, then a measurement of the second qubit results in 0 with certainty. This is true no matter how large the spatial separation between the two particles.
+								<br>								
 
 							</p>
 
@@ -253,50 +294,60 @@ Since $q_0$ is the accept state, the string $w$ will be accepted by the DFA.
 
 					<div data-content="round-four">
 
-						<h1>Quantum Logic Gates</h1>
+						<h1>Pushdown Automata</h1>
 						
 						<div class="question" style="overflow: auto">
-							
 							<p id="question">
-								
-								A lot of us are familiar with classical logic gates: NOT, AND, OR and so on. When we take bits to qubits, we take classical gates to quantum gates which act on qubits to produce other qubits. We shall introduce a few of them to you, and you’ll have to trust us when we say that these are all you’ll use. (There’s only so much one can do in a matter of hours.) We shall specify the gates in terms of how they act on qubits, just like classical gates are defined by their action on classical bits.
-
+								<b>Introduction</b>
+A pushdown automata is a finite automata with a  memory model of a stack attached to it. There are two types of PDAs, Deterministic Pushdown automata(DFA+Stack), DPDA and Nondeterministic Pushdown Automata(NFA+Stack), NDPA.
 							</p>
+<p id="question">
+	<b>Notation and Rules</b><br>
+A PDA is defined as a seven tuple, $P = (Q, \Sigma, \delta, q_0, Z_0, F, \Gamma)$ where:
+<ul>
+	<li>$Q$ is the set of states. This is a set of all states in the DFA, even the start state, $q_0$ and final set of states $F$ are present in this set.</li>
+	<li>$\Sigma$ is the language of the DFA.</li>
+	<li>$\delta$ is the transition function. The transition function is used to transition between states. In a DFA it’s in the form $Q × (\Sigma \cup \{\epsilon\})\rightarrow Q × \Gamma^*$ where $Q$ is the set of states, $\Sigma$ are the symbols. and $\Gamma$ is the alphabet of the stack</li>
+	<li>$q_0$ is the start state.</li>
+	<li>$Z_0$ is the bottom of the stack.</li>
+	<li>$F$ is the set of accept states</li>
+</ul>
+They differ from Finite Automata in two ways. One, they can use the top of the stack to decide which transition to take. Two, they can manipulate the stack as part of performing a transition.
+<center><img src="img/PDAe1.png" width="50%"></center><br><br>
+<b>Examples of PDAs</b>
+<ol>
+	<li>Let’s consider a language $L$ where $L = \{0^n1^n| n \geq 0\}$ Let the DPDA be called $M$ where $M=(Q,\Sigma,\Gamma,\delta,q_0,Z_0,F)$ where:
+	<ul>
+		<li><b>states:</b>$Q = \{p,q,r\}$</li>
+		<li><b>Input alphabet:</b>$\Sigma = \{0,1\}$</li>
+		<li><b>stack alphabet:</b>$\Gamma = \{A,Z\}$</li>
+		<li><b>Start state:</b> $q_0 = p$</li>
+		<li><b>Start stack symbol:</b> $Z$</li>
+		<li><b>Accepting states:</b> $F = \{r\}$</li>
+		<li>$M$ is a DPDA</li>
+	</ul>
+	<center><img src="img/PDAe2.png" width="75%"></center><br>
+	The transition relation $\delta$ consists of the following five instructions:<br>
+	<ul>
+		<li>$(p,0,Z) \rightarrow (p,AZ)$</li>
+		<li>$(p,0,A) \rightarrow (p,AA)$</li>
+		<li>$(p,1,A) \rightarrow (q,\epsilon)$</li>
+		<li>$(q,1,A) \rightarrow (q,\epsilon)$and,</li>
+		<li>$(q,\epsilon,Z)(r,Z)$</li>
+	</ul>
+</p>
+<p id="question">
+	In words, the first two instructions say that in state $p$ any time the symbol $0$ is read, one $A$ is pushed onto the stack. Pushing symbol $A$ on top of another $A$ is formalized as replacing top $A$ by $AA$ (and similarly for pushing symbol $A$ on top of a $Z$ ).<br>
+The third instruction says that in state $q$, for each symbol $1$ read, one $A$ is popped.
+Finally, the fourth instruction says that the machine may move from state $q$ to accepting state $r$ only when the stack consists of a single $Z$ .
+</p>
 
-							<ul>
-								<li>NOT (also known as X): $a\ket{0}+b\ket{1} \rightarrow a\ket{1}+b\ket{0}$. Should be obvious why it is named so.</li>
-								<li>Phase Flip (also known as Z): $a\ket{0}+b\ket{1} \rightarrow a\ket{0}-b\ket{1}$. This flips the sign, or phase, of the 1 part of a qubit.</li>
-								<li>Hadamard (also known as H): $a\ket{0}+b\ket{1} \rightarrow  a\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})+b\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})$ (which can be simplified so as to group the zeroes and ones). This one might seem unnatural, but it’ll prove to be a good friend.</li>
-								<li>Controlled NOT (Also known as CNOT): This is the only two qubit gate we’ll study. It is rather versatile, though. It performs a NOT on the second qubit if the first qubit is 1, otherwise it leaves it alone. $a\ket{00}+b\ket{01}+c\ket{10}+d\ket{11} \rightarrow a\ket{00}+b\ket{01}+c\ket{11}+d\ket{10}.$</li>
-							</ul>
+	</li>
+	<li>Let’s consider a language $L$ where $L = ww^R$ $|$ $w = (a+b)^*$<br>
 
-							<p id="question">These are denoted in circuit diagrams in the following manner:</p><br>
+	</li>
+</ol>
 
-							<img src="img/r4comb.png"></img><br>
-
-							<p id="question">
-								
-							The first bit of a CNOT gate is called the “control bit,” and the second the “target bit.” This is because (in the standard basis) the control bit does not change, while the target bit flips if and only if the control bit is 1. The CNOT gate is usually drawn as follows, with the control bit on top and the target bit on the bottom.<br><br>
-
-							</p>
-
-							<img src="img/r4four.png"></img>
-
-							<p id="question">
-								
-								This brings us to an important point. What happens to the quantum state of two qubits when we apply a single qubit gate to one of them, say the first? Let’s do an example. Suppose we apply a Hadamard gate to only the first qubit of the superposition:
-
-								$$\ket{\psi} = \frac{1}{2} \ket{00} -\frac{i}{\sqrt{2}} \ket{01} + \frac{1}{\sqrt{2}}\ket{11}$$
-
-								Then, $\ket{\psi}$ is transformed to
-
-								$$\ket{\psi} = \frac{1}{\sqrt{2}}(\ket{0}+\ket{1}) \frac{1}{2}\ket{0}- \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\frac{i}{\sqrt{2}} \ket{1}+\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})\frac{1}{\sqrt{2}}\ket{1}$$
-
-								after which you can take the products and sort out the mess.<br><br>
-
-								Well, that is it. There is a LOT more that can be said about quantum computation, but this is the knowledge that we would like you to take to the questions. Good luck!
-
-							</p>
 
 						</div>
 
@@ -435,7 +486,139 @@ Since $q_0$ is the accept state, the string $w$ will be accepted by the DFA.
 							</p>
 
 						</div>
+					<div data-content="round-six">
 
+						<h1>Questions</h1>
+						
+						<div class="question">
+							
+							<p id="question">
+								<strong>1</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>2</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>3</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>4</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>5</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>6</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>7</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>8</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>9</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
+
+						<div class="question">
+							
+							<p id="question">
+								<strong>10</strong>
+								Distinguishability of quantum states
+								We have seen that the probability of measuring an outcome in a quantum system in the modulus squared of the corresponding coefficient. Now, I give you two systems (photons, say):
+								$$\ket{\psi_1}= (\ket{0}+\ket{1})/\sqrt{2},\ket{\psi_2}= (\ket{0}-\ket{1})/\sqrt{2}$$
+
+								Note that all the probablities are half, so measuring both the states would give you the same results. How do you, then, distinguish between them? Feel free to prepare any more photons and conduct thought experiments with them.
+							</p>
+
+						</div>
 				</div>
 
 			</div>
