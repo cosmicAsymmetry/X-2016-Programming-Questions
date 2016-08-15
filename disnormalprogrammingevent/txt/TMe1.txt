@@ -1,0 +1,37 @@
+; This example program checks if the input string is has equal number of 'a', 'b' and 'c'
+; Input:'aaabbbccc'
+; Machine starts in state 0.
+; State 0
+0 a A r 1
+0 _ _ * accept
+0 b _ * reject
+0 c _ * reject
+0 B * r 0
+0 C * r 0
+0 A _ * reject
+    
+; State 1
+1 b B r 2
+1 c _ * reject
+1 a * r 1
+1 B * r 1
+; State 2
+2 c C r 3
+2 a _ * reject
+2 b * r 2
+2 C * r 2
+2 _ _ * reject
+; State 3
+3 a * l 3
+3 b * l 3
+3 c * l 3
+3 B * l 3 
+3 C * l 3
+3 _ * l 3
+3 A * r 0
+accept * : r accept2
+accept2 * ) * halt-accept
+reject _ : r reject2
+reject * _ l reject
+reject2 * ( * halt-reject
+Add Comment Collapse
