@@ -264,8 +264,8 @@ You have unlimited Laser - Headed Rooks and a single turn. If you lay the rook a
 You are to determine the minimum number of such rooks required to wipe out all the pieces on a given chessboard.
 
 								<br><br>
-								<span class="bold">Input: </span>An integer $n$.<br>
-The next  $n$ lines contain $n$ symbols i.e. $0$ or $1$. The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
+								<span class="bold">Input: </span>A  natural number $N$ .<br>
+The next  $N$ lines contain $N$ symbols i.e. “  0  " or "   1 ". The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
 
 								<br><br>
 								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co-ordinate of each rook in ordered pair form, i.e. $(x,y)$.
@@ -291,6 +291,14 @@ $-1$, if not possible .<br><br>
                                          
                                                
 											<td>2</td>
+										</tr>
+										<tr>
+											<td>2<br>
+
+1 1<br>
+1 1
+											</td>
+											<td>-1</td>
 										</tr>
 									</tbody>
 								</table>
@@ -356,7 +364,7 @@ $-1$, if not possible .<br><br>
 One day Chanaz got motivated to be the best, so she planned to catch Pokémon. She has to catch a total of $n$ Pokémon. But sadly, Chanaz is exhausted, so she works as follows :<br>
 First she catches $v$ Pokémon, takes rest at the Pokémon Centre , then she catches as many as $[v / k]$ Pokémon, takes rest again, then catches $[v / (k^2)]$ Pokémon and so on, forming the sequence :<br>
 $[v], [v / k], [v / k^2], [v / k^3], [v / k^4], [v / k^5], [v / k^6] ...$
-The expression $[a / b]$ is regarded as the integral part from dividing number $a$ by number $b$, that is, the Greatest Integer Function(Roof function).<br><br>
+The expression $[a / b]$ is regarded as the integral part from dividing number $a$ by number $b$, that is, the Greatest Integer Function(Floor function).<br><br>
 The moment the value of $[v / (k^p)]= 0$, Chanaz stops and goes to sleep. Once she sleeps, she gives up on catching Pokémon. But she wants to have $n$ Pokémon till then.
 <br><br>
 Chanaz is wondering, what minimum value $v$ can take to let her catch not less than n Pokémon before she falls asleep. Can you help her?
@@ -375,9 +383,12 @@ Chanaz is wondering, what minimum value $v$ can take to let her catch not less t
 											<th>Output</th>
 										</tr>
 										<tr>
-											<td>7 2<br>
-59 9</td>
-											<td>4<br>54</td>
+											<td>7 2</td>
+											<td>4</td>
+										</tr>
+										<tr>
+											<td>59 9</td>
+											<td>54</td>
 										</tr>
 									</tbody>
 								</table>
@@ -437,21 +448,26 @@ The next few lines of the output are the individual HPs of each Pokémon in the 
 							<div class="question">
 								
 								<p id="question">
-									Champion of Johto region wants it to be the Best of all , thus increases the productivity of the trainers by dividing the region into provinces.
+									Champion of Johto region wants it to be the Best of all  , thus wants to increase the productivity of the trainers by dividing the region into provinces.
 
 								</p>
 
 								<ol>
-									<li>The map of Johto is a rectangular matrix of $N$ *$ M$ size and each cell denotes a single city. $A[i][j]$ is the population of the cell of $(j + 1)th $ column and $(i + 1)th $ row.</li>
-									<li>The Champion has decided that any connected region having exactly $K$ cities can form a province. A region is said to be connected if one can join the cities by moving through common sides of the cities.</li>
-									<li>A city can be part of multiple provinces.</li>
+									<li>
+									The map of Johto is a rectangular matrix of $M$ *$N$ size and each cell denotes a single city. Each cell of the matrix in the input depicts the population of a city.
+									</li>
+									<li>
+									The Champion has decided that any connected region having exactly $K$ cities can form a province. A region is said to be connected if each of the city is  adjacent to at least one other city  along its edges. A city can be part of multiple provinces. 
+									</li>
 								</ol>
 
-								<p id="question">Now the Champion wants to calculate the productivity number, $P$ of his trainers. This number is defined to be the product of the populations of all the provinces. The population of a province is the sum of the populations of all the cities in the province.
-Your task is to  find the productivity number of the kingdom. Since it can be quite large, output it $mod(10^9+7)$.</p><br><br>
+								<p id="question">Now the Champion wants to know the productivity number ($P$) of  his fellow trainers.<br> 
+This number is defined to be the product of the populations of all the provinces. 
+The population of a province is the sum of the populations of all the cities in the province.<br>
+Your task is to  find the productivity number of the kingdom. Since it can be quite large, output it $mod$ $10^9+7$.</p><br><br>
 									<span class="bold"><b>Input:</b> </span>The first line of the input contains three space-separated integers: $N$,$ M$, and $ K$, denoting the number of rows in the map, the number of columns in the map and the number of cities in one province.
 Each of the following $N$ lines contain $M$ space-separated integers, denoting the populations of the cities.
-								</p>
+								</p><br><br>
 								<span class="bold"><b>Output:</b> </span>$P$, the productivity number of the region.<br><br>
 								<span class="bold"><b>Limits: </b></span>
 <ul>
@@ -460,7 +476,7 @@ Each of the following $N$ lines contain $M$ space-separated integers, denoting t
 <li>$1 \leq K \leq min(10, N * M)$</li>
 <li>$1 \leq A_{i,j} \leq 1000$</li>
 </ul>
-								<br><br><br>
+								<br><br>
 								<span class="bold"><b>Example</b></span><br><br>
 								</p>
 
@@ -479,9 +495,8 @@ Each of the following $N$ lines contain $M$ space-separated integers, denoting t
 										</tr>
 									</tbody>
 								</table>
-
-								<p id="question">
-									Here are all the provinces:<br>
+<b>Explanation</b><br>
+Here are all the provinces:<br>
 Province $1$, population $4$:<br>
 $1 2$<br>
 $3 4$<br>
@@ -495,7 +510,7 @@ Province $4$, population $7$:<br>
 $1 2$<br>
 $3 4$<br>
 Since the productivity number is a product of all the populations, we get $4 * 3 * 6 * 7 = 504$.<br><br>
-								</p>
+								
 							</div>
 						</div>
 
@@ -631,7 +646,7 @@ Feel free to take the inputs any way you prefer but the method below is recommen
 The first line of input will give you the value of $N$. The next $N$ lines are the preferences of the applicants, each preference will be separated with spaces. followed by $N$ lines of preferences of the college.
 <br><br>
 									<span class="bold">Output: </span>Print out $N$ stable  pairs.<br><br>
-									<span class="bold">Limits: </span>$0 < $n$ < 25$<br><br>
+									<span class="bold">Limits: </span>$0 < N < 25$<br><br>
 								</p>
 								<p id="question">
 									<span class="bold">Example</span><br><br>
