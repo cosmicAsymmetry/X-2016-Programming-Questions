@@ -101,8 +101,8 @@
 					
 						<h1>Programming &middot; X 2016</h1>
 						<p>Welcome to Day 2 of the Programming Event of MINET X 2016. We hope you have as much fun solving the problems as we had making them. You have been provided with the Code::Blocks and Turbo C++ environments.<br><br>
-						The event will be three hours long. There are five rounds and each round comprises of three questions. Your answers will have a direct bearing on your team’s stock prices. Questions that are in the Easy, Medium and Hard sections will give you an increment in stock prices in the ratio 1:2:4 respectively.<br><br>
-						Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer a question perfectly on your third try, you get one-fourth of the maximum points.<br><br>
+						The event will be three hours long. There are five rounds and each round comprises of three questions. Your answers will have a direct bearing on your team’s stock prices. The scoring method followed is the same as yesterday.<br><br>
+						Whenever you wish to attempt a question, raise your hand and one of us will come to you. Note that whenever there is an unsuccessful attempt, the maximum points for a problem are halved. So, for instance, if you answer a question perfectly on your third try, you get one-fourth of the maximum points. Accessing any other site other than the links provided and communication between two or more teams is not permitted.<br><br>
 						If you have any questions about the problems, do not be afraid to ask us.
 						Have fun, and Make beautiful programs. Best of luck!</p>
 					</div>
@@ -259,10 +259,10 @@ Assuming optimal play, what is the probability that $N$ cadets will win the game
 							<div class="question">
 								
 								<p id="question">
-You are given a description of a chessboard . It is a square field of $n * n$ size. Each cell in a field can be empty $(0)$ or it can be occupied by a piece $(1)$.<br><br>
-You have unlimited Laser - Headed Rooks and a single turn. If you lay the rook at the cell $(x, y)$, then after triggering it, it will wipe out all pieces in the row $x$ and all pieces in the column $y$.<br><br>
-You are to determine the minimum number of such rooks required to wipe out all the pieces on a given chessboard.
-
+You are given a description of a chessboard . It is a square field of $N * N$ size. Each cell in a field can be empty $0$ or it can be occupied by a piece $1$.<br><br>
+You have unlimited Laser - Headed Rooks and a single turn to place them. If you lay the rook at the cell $(x, y)$, then after placing all rooks, it will wipe out all pieces in the row $x$ and all pieces in the column $y$.<br><br>
+You are to determine the minimum number of such rooks required to wipe out all the pieces on a given chessboard.<br><br>
+You can’t place rooks on the given pieces.
 								<br><br>
 								<span class="bold">Input: </span>A  natural number $N$ .<br>
 The next  $N$ lines contain $N$ symbols i.e. “  0  " or "   1 ". The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
@@ -271,7 +271,7 @@ The next  $N$ lines contain $N$ symbols i.e. “  0  " or "   1 ". The $ j-th$ s
 								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co-ordinate of each rook in ordered pair form, i.e. $(x,y)$.
 <br>Or<br>
 $-1$, if not possible .<br><br>
-								<span class="bold">Limit: </span>$2 \leq  n \leq  10000$<br><br>
+								<span class="bold">Limit: </span>$2 \leq  N \leq  30$<br><br>
 								<span class="bold">Example</span><br><br>
 								</p>
 
@@ -284,8 +284,12 @@ $-1$, if not possible .<br><br>
 										<tr>
 											<td>6<br>
                                          0 0 0 0 0 0 1<br>
-                                         1 0 0 0 0 0 0<br>
-                                         0 0 0 0 0 0 0
+1 0 0 0 0 0 0<br>
+0 0 0 0 0 0 0<br>
+1 0 0 0 0 0 0<br>
+0 1 0 1 0 0 0<br>
+0 1 0 0 1 0 0<br>
+1 0 0 0 0 0 1
 											</td>
 
                                          
@@ -370,7 +374,7 @@ The moment the value of $[v / (k^p)]= 0$, Chanaz stops and goes to sleep. Once s
 Chanaz is wondering, what minimum value $v$ can take to let her catch not less than n Pokémon before she falls asleep. Can you help her?
 							<br><br>
 								<span class="bold">Input: </span>The input consists of two integers $n$ and $k$, separated by spaces — the Number of pokemon she has to catch, and the productivity reduction coefficient.<br><br>
-								<span class="bold">Output: </span>Print only one integer — the minimum value of $v$ that lets Chanaz catch $n$ Pokemon in one night.<br><br>
+								<span class="bold">Output: </span>Print the minimum value of $v$ that lets Chanaz catch $n$ Pokemon before she goes off to sleep.<br><br>
 								<span class="bold">Limit: </span>$1 < x \leq 10^9$ and
 								$2 \leq k \leq 10$<br><br>
 								<span class="bold">Example</span><br><br>
@@ -462,7 +466,7 @@ The next few lines of the output are the individual HPs of each Pokémon in the 
 								</ol>
 
 								<p id="question">Now the Champion wants to know the productivity number ($P$) of  his fellow trainers.<br> 
-This number is defined to be the product of the populations of all the provinces. 
+This number is defined to be the product of the populations of all the provinces.<br>
 The population of a province is the sum of the populations of all the cities in the province.<br>
 Your task is to  find the productivity number of the kingdom. Since it can be quite large, output it $mod$ $10^9+7$.</p><br><br>
 									<span class="bold"><b>Input:</b> </span>The first line of the input contains three space-separated integers: $N$,$ M$, and $ K$, denoting the number of rows in the map, the number of columns in the map and the number of cities in one province.
