@@ -268,8 +268,7 @@ You can’t place rooks on the given pieces.
 The next  $N$ lines contain $N$ symbols i.e. “  0  " or "   1 ". The $ j-th$ symbol in $i-th$ of the line  stands for cell $(i, j)$.
 
 								<br><br>
-								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board and also the co-ordinate of each rook in ordered pair form, i.e. $(x,y)$.
-<br>Or<br>
+								<span class="bold">Output: </span>The minimum number of rooks required(if possible) to wipe out all the pieces from the board<br>Or<br>
 $-1$, if not possible .<br><br>
 								<span class="bold">Limit: </span>$2 \leq  N \leq  30$<br><br>
 								<span class="bold">Example</span><br><br>
@@ -282,7 +281,7 @@ $-1$, if not possible .<br><br>
 											<th>Output</th>
 										</tr>
 										<tr>
-											<td>6<br>
+											<td>7<br>
                                          0 0 0 0 0 0 1<br>
 1 0 0 0 0 0 0<br>
 0 0 0 0 0 0 0<br>
@@ -323,7 +322,7 @@ $-1$, if not possible .<br><br>
 									The game takes place on a $h * w$ grid, and it is painted in two colors, but not like in chess. Almost all cells of the field are white and only some of them are black.<br> Currently Gerald is finishing a game of giant chess against his friend Pollard. Gerald needs to bring the pawn from the upper left corner of the board, where it is now standing, to the lower right corner. He wants to know the number of ways in which he can win.<br>
                                     The pawn can go in two ways: one cell down or one cell to the right. In addition, the pawn can not go to the black cells. According to the rules of giant chess Gerald moves his pawn until the game is over.
                                     <br><br>
-									<span class="bold">Input: </span>The first line of the input contains three integers: $h$, $w$, $n$ — the sides of the board and the number of black cells.Next n lines contain the description of black cells. The i-th of these lines contains numbers $r_i$, $c_i$ — the number of the row and column of the i-th cell.
+									<span class="bold">Input: </span>The first line of the input contains three integers: $h$, $w$, $n$ — the sides of the board and the number of black cells.Next $n$ lines contain the description of black cells. The i-th of these lines contains numbers $r_i$, $c_i$ — the number of the row and column of the i-th cell.
                                     It is guaranteed that the upper left and lower right cell are white and all cells in the description are distinct.
 <br><br>
 									<span class="bold">Output: </span>Print a single line — the number of ways in which Gerald can move his pawn from the upper left to the lower right corner modulo $10^9 + 7$.
@@ -409,20 +408,18 @@ In the second sample the answer is $v$ = 54. Chanaz catches Pokémon in the 
 							<h3>HP Calculation</h3>
 <div class="question">
 <p>
-Different Pokémon have different HP, duh. But how different can they be? Let us consider a new scenario in the Pokémon World. 
-<br><br>
-The HP of each Pokémon is a number, $N$. When all digits of $N$ are separately raised to the power of $n$, and added to one-another, the result is $N$, too<br> 
+You are given the task to find pokemons and group them into teams.The criteria for the pokemons to be in one team is that when each digit of HP $N$ is raised to power $n$ and added, the sum is equal to $N$. Find the HP of each pokemon in the team and their sum. 
+<br>
 An example is given below: 
 <br>
 $1634 = 1^4+6^4+3^4+4^4$
 In this, $N$ = 1634, and $n$ = 4.<br> 
-Fact says that there are few numbers that follow the same rule. Such Pokémon having the same $n$, which follow the same rule, are grouped in one team. 
-Find the sum $S$ of these number to find the combined HP of the team.<br><br>
+<br>
 </p>							
 									<span class="bold"><b>Input: </b></span>$n$ which is a natural number.<br><br>
 									<span class="bold"><b>Output:</b> </span>The first line of output is $S$, i.e. the combined HP of the team.
 <br>
-The next few lines of the output are the individual HPs of each Pokémon in the team.
+The next line of the output are the individual HPs of each Pokémon in the team.
 <br><br>
 									<span class="bold"><b>Limits:</b> </span>$1 < n \leq  8$<br><br>
 									<span class="bold"><b>Example</b></span><br><br>
@@ -461,7 +458,7 @@ The next few lines of the output are the individual HPs of each Pokémon in the 
 									The map of Johto is a rectangular matrix of $M$ *$N$ size and each cell denotes a single city. Each cell of the matrix in the input depicts the population of a city.
 									</li>
 									<li>
-									The Champion has decided that any connected region having exactly $K$ cities can form a province. A region is said to be connected if each of the city is  adjacent to at least one other city  along its edges. A city can be part of multiple provinces. 
+									The Champion has decided that any connected region having exactly $K$ cities can form a province. A region is said to be connected if each of the city is  adjacent to at least one other city  along one of its edges. A city can be part of multiple provinces. 
 									</li>
 								</ol>
 
@@ -469,8 +466,8 @@ The next few lines of the output are the individual HPs of each Pokémon in the 
 This number is defined to be the product of the populations of all the provinces.<br>
 The population of a province is the sum of the populations of all the cities in the province.<br>
 Your task is to  find the productivity number of the kingdom. Since it can be quite large, output it $mod$ $10^9+7$.</p><br><br>
-									<span class="bold"><b>Input:</b> </span>The first line of the input contains three space-separated integers: $N$,$ M$, and $ K$, denoting the number of rows in the map, the number of columns in the map and the number of cities in one province.
-Each of the following $N$ lines contain $M$ space-separated integers, denoting the populations of the cities.
+									<span class="bold"><b>Input:</b> </span>The first line of the input contains three space-separated integers: $M$,$ N$, and $ K$, denoting the number of rows in the map, the number of columns in the map and the number of cities in one province.
+Each of the following $M$ lines contain $N$ space-separated integers, denoting the populations of the cities.
 								</p><br><br>
 								<span class="bold"><b>Output:</b> </span>$P$, the productivity number of the region.<br><br>
 								<span class="bold"><b>Limits: </b></span>
@@ -601,7 +598,7 @@ Write a program to find $L$. Take $g = 10m/s^2$ <br><br>
 							<div class="question">
 								
 								<p id="question">
-									Consider $n$ balls, $B_1 , . . . , B_n$, having masses $m_1, m_2, . . . , m_n $ placed in a vertical stack with $B_1$ at the bottom and $B_n$ at the top. The bottom of $B_1$ is at a height $h$ above the ground, and the bottom of $B_n$ is a height $h + L$  above the ground.
+									Consider $n$ balls, $B_1 , . . . , B_n$, having masses $m_1, m_2, . . . , m_n $ placed in a vertical stack with $B_1$ at the bottom and $B_n$ at the top. The bottom of $B_1$ is at a height $h$ above the ground, and the bottom of $B_n$ is a height $h + l$  above the ground.
 The task is to find, firstly, the minimum number of balls such that the topmost ball attains a height of $H$ metres when it bounces back, after the stack is dropped from a height of $h$ metres. Assume that the balls still bounce elastically (which is a bit absurd here). Ignore wind resistance, etc., and assume that $l$ is negligible.<br><br>
 								</p>
 									<span class="bold"><b>Input: </b></span>Height $h$ from which the balls would be dropped and height $H$ to which the topmost ball will go.<br><br>
@@ -642,7 +639,7 @@ The task is to find, firstly, the minimum number of balls such that the topmost 
 								
 								<p id="question">
 
-There are $N$ applicants and $N$ colleges. Each college ranks all applicants in order of their preference ${A_1, A_2, A_3 … A_N}$. Similarly, each applicant ranks all colleges according their preference ${C_1, C_2, C_3 … C_N}$. If the resulting set of pairs contains no pairs of form ${(A_1,C_2)} $, ${(A_2, C_1)}$ such that $A_1$prefers $C_1$to $C_2$and $C_1$prefers $A_1$to $A_2$ then the pairings are said to stable.<br><br>
+There are $N$ applicants and $N$ colleges. Each college ranks all applicants in order of their preference ${A_1, A_2, A_3 … A_N}$. Similarly, each applicant ranks all colleges according their preference ${C_1, C_2, C_3 … C_N}$. If the resulting set of pairs contains <b>no</b> pairs of form ${(A_1,C_2)} $, ${(A_2, C_1)}$ such that $A_1$prefers $C_1$to $C_2$and $C_1$prefers $A_1$to $A_2$ then the pairings are said to stable.<br><br>
 You need to figure out the stable solution and when there is no solution available output $-1$.
 <br><br>
 									<span class="bold">Input: </span>
